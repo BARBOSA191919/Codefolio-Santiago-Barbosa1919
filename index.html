@@ -13,6 +13,11 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
   <script src="https://cdn.tailwindcss.com"></script>
 
 
@@ -69,7 +74,7 @@
       <ul>
         <li><a onclick="closeMenu()" href="#home">Home</a></li>
         <li><a onclick="closeMenu()" href="#projects">Proyectos</a></li>
-        <li><a onclick="closeMenu()" href="#competencias">Habilidades</a></li>
+        <li><a onclick="closeMenu()" href="#competenciasDesktop">Habilidades</a></li>
         <li><a onclick="closeMenu()" href="#sobre">Sobre mi</a></li>
       </ul>
   
@@ -120,9 +125,10 @@
       <span class="line1__bars-menu"></span>
       <span class="line2__bars-menu"></span>
       <span class="line3__bars-menu"></span>
+      <div class="morphing-box"></div>
+
     </div>
   </nav>
-
 
   <header id="home">
     <div class="fondo-home">
@@ -132,15 +138,16 @@
           <img src="Assets/img/bg_videoImg.jpg" alt="Imagen fondo">
         </video>
   
-        <div class="content container">
+        <div class="text content container">
+          <div class="cube">
+            <div class="cube-face cube-face-front">
           <div class="text">
             <div class="parrafo">
               <p>Hey! I'm a Software Developer.</p>
             </div>
   
             <h1>Santiago Barbosa</h1>
-            <div class="flex gap-6 mt-6 items-center">
-
+            <div class="flex gap-6 mt-6 items-center social-icons">
               <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
                 <div class="absolute hidden group-hover:block bg-black/85 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-white">
                   LinkedIn
@@ -221,18 +228,24 @@
             </div>
             </div>
           </div>
-  
+          </div>
+          <div class="cube-face cube-face-bottom">
+            <!-- Optional: Add projects preview or leave empty -->
+          </div>
+        </div>
           <a class="arrow" href="#projects">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#fff" viewBox="0 0 256 256">
               <path
                 d="M213.66,122.34a8,8,0,0,1,0,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,196.69l74.34-74.35A8,8,0,0,1,213.66,122.34Zm-91.32,11.32a8,8,0,0,0,11.32,0l80-80a8,8,0,0,0-11.32-11.32L128,116.69,53.66,42.34A8,8,0,0,0,42.34,53.66Z">
               </path>
             </svg>
-          </a>
-        </div>
-      </div>
-    </div>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
   </header>
+
 
   <main>
 
@@ -306,7 +319,7 @@
           <div data-aos="fade-up" data-aos-anchor-placement="top-center" class="card left">
             <div class="image">
               <a target="_blank" href="https://grupodamatta.com/">
-                <img src="./Assets/Mockups/Mockup Damatta.webp" alt="mockup site Grupo Damatta">
+                <img src="./Assets/Mockups/Mockup_Damatta.webp" alt="mockup site Grupo Damatta">
               </a>
             </div>
 
@@ -437,11 +450,6 @@
             </div>
           </div>
         </div>
-
-        <img class="textoPortfolio" src="./Assets/img/PORTFOLIO TEXT.png" alt="">
-        <img class="looper um" src="./Assets/img/LooperGroup.png" alt="">
-        <img class="looper dois" src="./Assets/img/LooperGroup.png" alt="">
-        <img class="looper tres" src="./Assets/img/LooperGroup.png" alt="">
       </div>
     </section>
 
@@ -480,7 +488,6 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-      <img class="textoHabilidades" src="./Assets/img/HABILIDADES.png" alt="">
     </section>
 
     <section id="competenciasDesktop">
@@ -513,7 +520,7 @@
 
         </div>
       </div>
-      <img class="textoHabilidades" src="./Assets/img/HABILIDADES.png" alt="">
+    
     </section>
 
     <section>

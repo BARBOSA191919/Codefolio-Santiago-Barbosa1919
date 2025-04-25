@@ -297,8 +297,10 @@ section {
 }
 
 #home .content .text .parrafo {
-  display: flex;
   align-items: center;
+  display: block;
+  opacity: 1;
+  color: #fff; 
 }
 
 #home .social-links {
@@ -952,7 +954,48 @@ section#competenciasDesktop {
   .banner .content h1 {
     font-size: 5em;
   }
-
+  
+  #navbar {
+    position: relative;
+    z-index: 50;
+    transition: all 0.3s ease;
+  }
+  .header-content, .social-icons {
+    position: relative;
+  }
+  .cube {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cube-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .cube-face-front {
+    transform: translateZ(0);
+  }
+  
+  .cube-face-bottom {
+    transform: rotateX(90deg) translateZ(-50vh);
+    background: #1a1a1a; /* Optional: Style for visibility */
+  }
+  
+  #navbar {
+    position: relative;
+    z-index: 50;
+    transition: all 0.3s ease;
+  }
+  
+  .content.container {
+    position: relative;
+    overflow: hidden;
+  }
 }
-
 

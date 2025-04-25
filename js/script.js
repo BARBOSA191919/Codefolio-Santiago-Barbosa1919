@@ -234,4 +234,81 @@ particlesJS("particles-js", {
         }
       });
 
+      gsap.registerPlugin(ScrollTrigger);
 
+      gsap.to(".header-content", {
+        y: -50,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#home",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+      
+      gsap.to(".social-icons", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: "#home",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+      
+      gsap.to("#navbar", {
+        backgroundColor: "rgba(0, 0, 0, 0.9)",
+        duration: 0.5,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#home",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+
+
+      gsap.to(".cube-face-front", {
+        rotateX: -90,
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: "#home",
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.5,
+          toggleActions: "play none none reverse"
+        }
+      });
+      
+      gsap.to(".cube-face-bottom", {
+        rotateX: -90,
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: "#home",
+          start: "top top",
+          end: "bottom top",
+          scrub: 0.5,
+          toggleActions: "play none none reverse"
+        }
+      });
+      
+      gsap.to("#navbar", {
+        backgroundColor: "rgba(0, 0, 0, 0.9)",
+        duration: 0.5,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#home",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
