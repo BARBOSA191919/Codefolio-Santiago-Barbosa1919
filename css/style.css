@@ -284,9 +284,11 @@ section {
   display: flex;
   gap: 5rem;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Use min-height instead of height to allow content to expand */
+  padding: 2rem 0; /* Add padding to prevent content from sticking to edges */
+  box-sizing: border-box;
 }
 
 #home .content .text {
@@ -294,6 +296,9 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  width: 100%; /* Ensure it takes full width for centering */
+  padding: 1rem;
 }
 
 #home .content .text .parrafo {
@@ -359,7 +364,7 @@ section {
 }
 
 .text p {
-  font-size: 3.4rem;
+  font-size: 2.4rem; /* Reduce font size for mobile */
   font-family: var(--fuenteSecundaria);
   color: var(--gris);
   font-weight: 500;
@@ -369,7 +374,7 @@ section {
 
 .text h1 {
   font-family: var(--fuentePrincipal);
-  font-size: 7rem;
+  font-size: 5rem; /* Smaller font size for mobile */
   padding: 0;
   margin: 0;
   color: transparent;
@@ -377,10 +382,28 @@ section {
 }
 
 @media (min-width: 768px) {
+  .text p {
+    font-size: 3.4rem; /* Larger font size for desktop */
+  }
+
   .text h1 {
-    font-size: 7rem;
+    font-size: 7rem; /* Original size for desktop */
   }
 }
+
+@media screen and (max-width: 767px) {
+  .content.container {
+      position: relative;
+      overflow: hidden;
+
+  }
+  .arrow-position{
+    position: absolute;
+    padding-top: 430px;
+
+  }
+}
+
 
 /* PROJECTS =================== */
 #projects {
@@ -968,7 +991,11 @@ section#competenciasDesktop {
     transform-style: preserve-3d;
     perspective: 1000px;
     width: 100%;
-    height: 100%;
+    height: auto; /* Let the cube adapt to content height */
+    min-height: 100vh; /* Ensure it takes at least the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .cube-face {
@@ -976,15 +1003,23 @@ section#competenciasDesktop {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .cube-face-front {
     transform: translateZ(0);
+    background: transparent;
   }
   
   .cube-face-bottom {
     transform: rotateX(90deg) translateZ(-50vh);
-    background: #1a1a1a; /* Optional: Style for visibility */
+    background: rgba(26, 26, 26, 0.8);
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    padding: 20px;
   }
   
   #navbar {
@@ -998,4 +1033,3 @@ section#competenciasDesktop {
     overflow: hidden;
   }
 }
-
