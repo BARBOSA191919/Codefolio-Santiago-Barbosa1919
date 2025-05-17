@@ -4,9 +4,16 @@
   --gris: #bdbcbc;
   --negro: #000000;
   --fuentePrincipal: "Bungee", sans-serif;
-  --fuenteSecundaria: "Exo 2", sans-serif;
+  --fuenteSecundaria: "Montserrat", sans-serif;
+  --fuenteTitulos: "Inter", sans-serif;
   --color-text: #e4e4e4;
   --p-color: #6e6e6e;
+  --card-width: 280px;
+  --card-height: 400px;
+  --card-spacing: 40px;
+  --animation-duration: 20s;
+  --glow-intensity: 0.5;
+  --float-distance: 10px;
 }
 
 *,
@@ -15,6 +22,12 @@
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -29,6 +42,23 @@ body {
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
+}
+.bienvenidos-svg {
+  padding: 2vw;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.bienvenidos-svg .letter {
+  fill: #fffafa;
+  stroke: #ffffff;
+  stroke-width: 0.85px;
+  font-family: 'Montserrat', sans-serif; /* Ajusta según el diseño de tu portafolio */
+  font-size: 50px;
+  font-weight: 500;
+  transform-origin: center;
 }
 
 .container {
@@ -146,7 +176,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
+  gap: 3rem;
   padding: 0;
 }
 
@@ -231,7 +261,7 @@ section {
   }
 
   .nav-content ul {
-    gap: 6rem;
+    gap: 4rem;
   }
 
   .nav-content ul li a {
@@ -364,30 +394,66 @@ section {
 }
 
 .text p {
-  font-size: 2.4rem; /* Reduce font size for mobile */
+  font-size: 2.4rem;
   font-family: var(--fuenteSecundaria);
   color: var(--gris);
   font-weight: 500;
   margin: 0;
   padding: 0;
+  letter-spacing: 1px;
 }
 
 .text h1 {
   font-family: var(--fuentePrincipal);
-  font-size: 5rem; /* Smaller font size for mobile */
+  font-size: 6rem;
   padding: 0;
   margin: 0;
   color: transparent;
   -webkit-text-stroke: 1px var(--gris);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.letter {
+  display: inline-block;
+  clip-path: inset(100% 0 0 0); /* Oculta las letras desde la parte inferior */
+  position: relative;
+}
+
+.letter-space {
+  display: inline-block;
+  width: 0.5em; /* Ajusta el espacio entre palabras */
 }
 
 @media (min-width: 768px) {
   .text p {
-    font-size: 3.4rem; /* Larger font size for desktop */
+    font-size: 2.4rem;
   }
 
   .text h1 {
-    font-size: 7rem; /* Original size for desktop */
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .text h1 {
+    font-size: 4rem;
+  }
+  
+  .text p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h1 {
+    font-size: 3.2rem;
+  }
+  
+  .text p {
+    font-size: 1.6rem;
   }
 }
 
@@ -409,7 +475,7 @@ section {
 #projects {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.519);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.082);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.519);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   position: relative;
@@ -459,17 +525,21 @@ section {
 }
 
 #projects header h2 {
-  line-height: 1.1;
+  font-family: var(--fuenteTitulos);
+  line-height: 1.2;
   color: var(--color-text);
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 #projects header p {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
+  font-family: var(--fuenteSecundaria);
+  font-size: 1.8rem;
   color: var(--p-color);
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 #projects header {
@@ -487,21 +557,31 @@ section {
 
 #projects .image img {
   width: 100%;
-  transition: all 200ms ease-in-out;
-  animation: move 2.5s infinite ease-in-out;
-
-  filter: drop-shadow(2px 4px 20px #1b1b1b);
-
+  height: auto;
+  border-radius: 12px;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: float 3s infinite ease-in-out;
+  filter: drop-shadow(0 4px 20px rgba(27, 27, 27, 0.3));
   margin-bottom: 4rem;
-}
-
-#projects .card.right .image img {
-  animation-delay: 500ms;
+  object-fit: cover;
+  transform-origin: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 #projects .image img:hover {
+  transform: scale(1.02) translateY(-5px);
+  filter: drop-shadow(0 8px 30px rgba(27, 27, 27, 0.4));
   cursor: pointer;
-  filter: drop-shadow(1px 3px 15px #4646469d);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 #projects h3 {
@@ -548,72 +628,10 @@ section {
     column-gap: 15rem;
   }
 }
-
-/* competencias=================== */
-#competencias {
-  background-color: #050505;
-  overflow: hidden;
-  padding: 8.5rem;
-}
-
-#competencias header h2 {
-  font-size: 3.5rem;
-  color: var(--color-text);
-  margin-bottom: 5rem;
-  text-align: center;
-}
-
-#competencias .cards .card {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-
-  /* From https://css.glass */
-  background: rgba(39, 39, 39, 0.1);
-  backdrop-filter: blur(3.9px);
-  -webkit-backdrop-filter: blur(3.9px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 2rem;
-
-  min-height: 30rem;
-
-  box-shadow: 5px 5px 20px #000000;
-}
-
-#competencias .cards .card ion-icon {
-  font-size: 6rem;
-  color: var(--color-text);
-}
-
-#competencias .cards .card span {
-  color: #d8d8d8;
-  font-weight: 700;
-  font-size: 2rem;
-  margin-top: -1rem;
-}
-
-#competencias .cards .card p {
-  font-family: "Poppins", sans-serif;
-  color: var(--p-color);
-  font-size: 1.6rem;
-  font-weight: 300;
-}
-
-#competencias img.textoHabilidades {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  z-index: -1;
-  opacity: 0.02;
-}
-
 section#competenciasDesktop {
-  display: none;
+  display: block;
 }
+
 
 @media (min-width: 1080px) {
   .wrapper {
@@ -627,18 +645,13 @@ section#competenciasDesktop {
     background-position: initial;
   }
 
-  header#home .wrapper-home .banner .text h1 {
-    font-size: 10rem;
-  }
+
 
   header#home .content .text .paragraphy p {
     font-size: 3rem;
   }
 
-  header#home .banner video {
-    filter: brightness(0.5);
-    display: initial;
-  }
+
 
   section#projects .wrapper header h2 {
     font-size: 5rem;
@@ -839,145 +852,6 @@ section#competenciasDesktop {
   }
 }
 
-/* Carrusel */
-@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
-@import url("https://fonts.cdnfonts.com/css/poppins");
-
-.banner {
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-}
-.banner .slider {
-  position: absolute;
-  width: 200px;
-  height: 250px;
-  top: 10%;
-  left: calc(50% - 100px);
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-  animation: autoRun 20s linear infinite;
-  z-index: 2;
-}
-@keyframes autoRun {
-  from {
-    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-  }
-  to {
-    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
-  }
-}
-
-.banner .slider .item {
-  position: absolute;
-  inset: 0 0 0 0;
-  transform: rotateY(
-      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-    )
-    translateZ(550px);
-}
-.banner .slider .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.banner .content {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(1400px, 100vw);
-  height: max-content;
-  padding-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
-}
-.banner .content h1 {
-  font-family: "ICA Rubrik";
-  font-size: 16em;
-  line-height: 1em;
-  color: #25283b;
-  position: relative;
-}
-.banner .content h1::after {
-  position: absolute;
-  inset: 0 0 0 0;
-  content: attr(data-content);
-  z-index: 2;
-  -webkit-text-stroke: 2px #d2d2d2;
-  color: transparent;
-}
-.banner .content .author {
-  font-family: Poppins;
-  text-align: right;
-  max-width: 200px;
-}
-.banner .content h2 {
-  font-size: 3em;
-}
-.banner .content .model {
-  background-image: url(images/model.png);
-  width: 100%;
-  height: 75vh;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-size: auto 130%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  z-index: 1;
-}
-@media screen and (max-width: 1023px) {
-  .banner .slider {
-    width: 160px;
-    height: 200px;
-    left: calc(50% - 80px);
-  }
-  .banner .slider .item {
-    transform: rotateY(
-        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-      )
-      translateZ(300px);
-  }
-  .banner .content h1 {
-    text-align: center;
-    width: 100%;
-    text-shadow: 0 10px 20px #000;
-    font-size: 7em;
-  }
-  .banner .content .author {
-    color: #fff;
-    padding: 20px;
-    text-shadow: 0 10px 20px #000;
-    z-index: 2;
-    max-width: unset;
-    width: 100%;
-    text-align: center;
-    padding: 0 30px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .banner .slider {
-    width: 100px;
-    height: 150px;
-    left: calc(50% - 50px);
-    padding: 0;
-  }
-  .banner .slider .item {
-    transform: rotateY(
-        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
-      )
-      translateZ(180px);
-  }
-  .banner .content h1 {
-    font-size: 5em;
-  }
-  
   #navbar {
     position: relative;
     z-index: 50;
@@ -992,7 +866,7 @@ section#competenciasDesktop {
     perspective: 1000px;
     width: 100%;
     height: auto; /* Let the cube adapt to content height */
-    min-height: 100vh; /* Ensure it takes at least the viewport height */
+    min-height: 50vh; /* Ensure it takes at least the viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1032,4 +906,245 @@ section#competenciasDesktop {
     position: relative;
     overflow: hidden;
   }
+  
+
+/* Infinite Scrolling Cards for #competenciasDesktop */
+#competenciasDesktop {
+  overflow: hidden;
+  padding: 8rem 0;
+  position: relative;
 }
+
+#competenciasDesktop .wrapper {
+  width: 90%;
+  max-width: 150rem;
+  margin: 0 auto;
+}
+
+#competenciasDesktop .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#competenciasDesktop header h2 {
+  font-size: 3.5rem;
+  color: var(--color-text);
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+#competenciasDesktop .skills-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+#competenciasDesktop .cards-container {
+  position: relative;
+  display: flex;
+  gap: var(--card-spacing);
+  padding: 30px 15px;
+  will-change: transform;
+}
+
+#competenciasDesktop .skill-card {
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  background: rgba(0, 5, 15, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.15s ease;
+  will-change: transform, opacity;
+  animation: float 2s ease-in-out infinite,
+             autonomous-glow var(--glow-duration, 3s) ease-in-out infinite var(--glow-delay, 0s);
+  --glow-color: #0066ff;
+}
+
+#competenciasDesktop .skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+#competenciasDesktop .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.15s ease;
+  will-change: opacity;
+  opacity: 0.7;
+  filter: brightness(0.9);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(var(--float-distance));
+  }
+}
+
+@keyframes autonomous-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0);
+    filter: brightness(0.9);
+    opacity: 0.9;
+  }
+  50% {
+    box-shadow: 0 0 20px var(--glow-color);
+    filter: brightness(1.3);
+    opacity: 1;
+  }
+}
+
+#competenciasDesktop .skill-card:hover {
+  transform: scale(1.08);
+  background: rgba(0, 5, 15, 0.6);
+}
+
+#competenciasDesktop .skill-card:hover .card-image {
+  opacity: 1;
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+.cursor-light {
+  position: fixed;
+  width: var(--cursor-size, 200px);
+  height: var(--cursor-size, 200px);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) translateZ(0);
+  z-index: 1;
+  mix-blend-mode: screen;
+  will-change: transform;
+  display: none;
+}
+
+/* Responsividad */
+@media (max-width: 1080px) {
+  :root {
+    --card-width: 200px;
+    --card-height: 300px;
+    --card-spacing: 15px;
+    --float-distance: 8px;
+    --cursor-size: 150px;
+  }
+
+  #competenciasDesktop {
+    padding: 6rem 0;
+  }
+
+  #competenciasDesktop header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+  }
+
+  #competenciasDesktop .cards-container {
+    padding: 20px 10px;
+  }
+
+  #competenciasDesktop .skill-card {
+    border-radius: 10px;
+  }
+
+  #competenciasDesktop .skill-card::before {
+    border-radius: 10px;
+  }
+
+  @keyframes autonomous-glow {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(0, 102, 255, 0);
+      filter: brightness(0.8);
+      opacity: 0.8;
+    }
+    50% {
+      box-shadow: 0 0 10px var(--glow-color);
+      filter: brightness(1.1);
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --card-width: 160px;
+    --card-height: 240px;
+    --card-spacing: 10px;
+    --float-distance: 6px;
+    --cursor-size: 100px;
+  }
+
+  #competenciasDesktop {
+    padding: 5rem 0;
+  }
+
+  #competenciasDesktop header h2 {
+    font-size: 2.4rem;
+  }
+
+  #competenciasDesktop .cards-container {
+    padding: 15px 5px;
+  }
+
+  #competenciasDesktop .skill-card {
+    border-radius: 8px;
+  }
+
+  #competenciasDesktop .skill-card::before {
+    border-radius: 8px;
+  }
+
+  .cursor-light {
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.2) 0%,
+      transparent 70%
+    );
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --card-width: 140px;
+    --card-height: 200px;
+    --card-spacing: 8px;
+    --float-distance: 5px;
+    --cursor-size: 80px;
+  }
+
+  #competenciasDesktop {
+    padding: 4rem 0;
+  }
+
+  #competenciasDesktop header h2 {
+    font-size: 2rem;
+  }
+
+  #competenciasDesktop .cards-container {
+    padding: 10px 5px;
+  }
+}
+
+
+
