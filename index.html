@@ -78,7 +78,7 @@
         <li><a onclick="closeMenu()" href="#projects">Proyectos</a></li>
         <li><a onclick="closeMenu()" href="#competenciasDesktop">Habilidades</a></li>
         <li><a onclick="closeMenu()" href="#sobre">Sobre mi</a></li>
-        <li><a onclick="closeMenu()" href="#contacto">Contacto</a></li>
+        <li><a onclick="closeMenu()" href="#contact">Contacto</a></li>
       </ul>
   
       <div class="social-links relative flex justify-center items-center">
@@ -468,9 +468,8 @@
               <!-- Cards will be dynamically inserted by JavaScript -->
             </div>
           </div>
-            <div class="content">
-            
-              <div class="model"></div>
+
+          
             </div>
           </div>
 
@@ -479,8 +478,83 @@
     
     </section>
 
-    <section>
-      <h1>sobre mi</h1>
+    <section id="sobre">
+      <div class="wrapper">
+        <header>
+          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Sobre Mí</h2>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Conoce más sobre mi experiencia y pasión por el desarrollo</p>
+        </header>
+
+        <div class="about-content">
+          <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+            <div class="image-container">
+              <img src="./Assets/img/link.jpg" alt="Santiago Barbosa">
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+
+          <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
+            <div class="text-content">
+              <h3>Desarrollador Web Full Stack</h3>
+              <p>Soy un desarrollador web apasionado por crear experiencias digitales únicas y funcionales. Mi enfoque combina diseño creativo con código limpio y eficiente.</p>
+              <p>Como tecnólogo en desarrollo de software, me destaco por mi responsabilidad, disciplina y capacidad de análisis. Me especializo en crear soluciones web innovadoras que combinan estética y funcionalidad.</p>
+              <p>Mi experiencia incluye el desarrollo de aplicaciones web responsivas, implementación de interfaces de usuario intuitivas y optimización de rendimiento. Siempre busco mantenerme actualizado con las últimas tecnologías y mejores prácticas del desarrollo web.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrapper">
+        <header>
+          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Contacto</h2>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        </header>
+
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>sbarbosarivas@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+57 321 769 6864</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Neiva, Colombia</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Disponible para proyectos freelance</span>
+            </div>
+          </div>
+
+          <div class="contact-form" data-aos="fade-left" data-aos-duration="1000">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
