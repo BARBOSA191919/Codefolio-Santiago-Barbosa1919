@@ -77,8 +77,8 @@
         <li><a onclick="closeMenu()" href="#home">Home</a></li>
         <li><a onclick="closeMenu()" href="#projects">Proyectos</a></li>
         <li><a onclick="closeMenu()" href="#competenciasDesktop">Habilidades</a></li>
-        <li><a onclick="closeMenu()" href="#sobre">Sobre mi</a></li>
-        <li><a onclick="closeMenu()" href="#contact">Contacto</a></li>
+        <li><a onclick="closeMenu()" href="#about">Sobre mi</a></li>
+        <li><a onclick="closeMenu()" href="#contacto">Contacto</a></li>
       </ul>
   
       <div class="social-links relative flex justify-center items-center">
@@ -146,7 +146,7 @@
             <div class="cube-face cube-face-front">
           <div class="text">
             <div class="parrafo">
-              <p>Hey! I'm a Software Developer.</p>
+              <p>¡Hola! Soy desarrollador de software</p>
             </div>
   
             <h1>
@@ -468,101 +468,220 @@
               <!-- Cards will be dynamically inserted by JavaScript -->
             </div>
           </div>
-
-          
             </div>
           </div>
 
         </div>
       </div>
-    
     </section>
 
-    <section id="sobre">
+    <section class="about section" id="about">
       <div class="wrapper">
         <header>
-          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Sobre Mí</h2>
-          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Conoce más sobre mi experiencia y pasión por el desarrollo</p>
+          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">SOBRE MÍ</h2>
+          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Conoce más sobre mi experiencia y habilidades</p><br>
         </header>
-
-        <div class="about-content">
+    
+        <div class="about-container container">
           <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
             <div class="image-container">
-              <img src="./Assets/img/link.jpg" alt="Santiago Barbosa">
+              <img src="./Assets/img/ejemplo2.png" alt="Santiago Barbosa" class="about-img">
               <div class="image-overlay"></div>
             </div>
           </div>
-
-          <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
-            <div class="text-content">
-              <h3>Desarrollador Web Full Stack</h3>
-              <p>Soy un desarrollador web apasionado por crear experiencias digitales únicas y funcionales. Mi enfoque combina diseño creativo con código limpio y eficiente.</p>
-              <p>Como tecnólogo en desarrollo de software, me destaco por mi responsabilidad, disciplina y capacidad de análisis. Me especializo en crear soluciones web innovadoras que combinan estética y funcionalidad.</p>
-              <p>Mi experiencia incluye el desarrollo de aplicaciones web responsivas, implementación de interfaces de usuario intuitivas y optimización de rendimiento. Siempre busco mantenerme actualizado con las últimas tecnologías y mejores prácticas del desarrollo web.</p>
+    
+          <div class="about-data" data-aos="fade-left" data-aos-duration="1000">
+            <h3 class="about-heading">¡Hola!, Soy Santiago Barbosa</h3>
+            <p class="about-description">
+              Desarrollador web Full Stack apasionado por crear experiencias digitales únicas. 
+              Me especializo en el desarrollo de aplicaciones web modernas, responsivas y de alto rendimiento.
+              Con experiencia en tecnologías como Angular, Node.js, y bases de datos SQL/NoSQL.
+            </p>
+    
+            <div class="about-info">
+              <div class="about-box">
+                <i class="fas fa-code about-icon"></i>
+                <h3 class="about-title">Desarrollo</h3>
+                <span class="about-subtitle">Full Stack</span>
+              </div>
+    
+              <div class="about-box">
+                <i class="fas fa-project-diagram about-icon"></i>
+                <h3 class="about-title">Proyectos</h3>
+                <span class="about-subtitle">20+ Completados</span>
+              </div>
+    
+              <div class="about-box">
+                <i class="fas fa-rocket about-icon"></i>
+                <h3 class="about-title">Experiencia</h3>
+                <span class="about-subtitle">1 Año</span>
+              </div>
+            </div>
+    
+            <div class="about-buttons">
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBpRhNpTfnQZJrdglZmtrmcMCBTdZFfTxgzLMQrttrMBNrLkxZCGzlXVrZmZNFshGvTHTsz" target="_blank" class="contact-button">
+                Contáctame
+                <i class="fas fa-paper-plane"></i>
+                <span>sbarbosarivas@gmail.com</span>
+              </a>
+              <a href="/CV Santiago Barbosa.pdf" target="_blank" class="contact-button cv-button">
+                Descargar
+                <i class="fas fa-download"></i>
+                <span>Hoja de vida Santiago</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section id="contact">
-      <div class="wrapper">
-        <header>
-          <h2 data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Contacto</h2>
-          <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+          
+    <section id="contacto" class="contact-section">
+      <div class="container">
+        <header data-aos="fade-up" data-aos-duration="800">
+          <h2>Contáctame</h2>
+          <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
+          <div class="section-divider">
+            <span></span>
+            <i class="fas fa-handshake"></i>
+            <span></span>
+          </div>
         </header>
-
+    
         <div class="contact-content">
-          <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>sbarbosarivas@gmail.com</span>
+          <div class="contact-card" data-aos="fade-right" data-aos-duration="1000">
+            <div class="contact-info">
+              <h3>Información de Contacto</h3>
+              
+              <div class="contact-item">
+                <div class="icon-container">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="label">Email</span>
+                  <a href="mailto:sbarbosarivas@gmail.com">sbarbosarivas@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="icon-container whatsapp">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="label">WhatsApp</span>
+                  <a href="https://wa.me/573217696864" target="_blank">+57 321 769 6864</a>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="icon-container">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <span class="label">Ubicación</span>
+                  <span>Neiva, Colombia</span>
+                </div>
+              </div>
+              
+              <div class="availability">
+                <div class="status-indicator online"></div>
+                <span>Disponible para nuevos proyectos</span>
+              </div>
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>+57 321 769 6864</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Neiva, Colombia</span>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-clock"></i>
-              <span>Disponible para proyectos freelance</span>
+            
+            <div class="contact-socials">
+              <h3>Sígueme en mis redes</h3>
+              <div class="social-grid">
+                <a href="https://www.linkedin.com/in/santiago-barbosa-903641209/" target="_blank" class="social-icon linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/BARBOSA191919" target="_blank" class="social-icon github">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.instagram.com/sbarbosarivas/" target="_blank" class="social-icon instagram">
+                  <i class="fab fa-instagram"></i>
+                  <span>Instagram</span>
+                </a>
+                <a href="https://discord.gg/ChznPA5q" target="_blank" class="social-icon discord">
+                  <i class="fab fa-discord"></i>
+                  <span>Discord</span>
+                </a>
+              </div>
             </div>
           </div>
-
-          <div class="contact-form" data-aos="fade-left" data-aos-duration="1000">
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" required>
+          
+          <div class="contact-map-container" data-aos="fade-left" data-aos-duration="1000">
+            <div class="map-header">
+              <i class="fas fa-location-dot"></i>
+              <h3>Mi Ubicación</h3>
+            </div>
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15916.153614218496!2d-75.2962412!3d2.9272369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3b7443e8c17c9f%3A0x7e7b2c0b7e8e7b8!2sNeiva%2C%20Huila%2C%20Colombia!5e0!3m2!1sen!2sus!4v1697654321098!5m2!1sen!2sus"
+                width="200%"
+                height="400"
+                style="border:0; border-radius: 12px; filter: invert(90%) hue-rotate(180deg) brightness(1.2) contrast(1.1);"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="map-overlay">
+              <div class="location-pin">
+                <i class="fas fa-map-pin"></i>
+                <span>Neiva, Huila</span>
               </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="subject">Asunto</label>
-                <input type="text" id="subject" name="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea id="message" name="message" required></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Enviar Mensaje</button>
-            </form>
+            </div>
           </div>
+        </div>
+        
+        <div class="contact-cta" data-aos="fade-up" data-aos-duration="800">
+          <a href="mailto:sbarbosarivas@gmail.com" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i>
+            Envíame un mensaje
+          </a>
+          <a href="https://wa.me/573217696864" target="_blank" class="btn btn-secondary whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            Contactar por WhatsApp
+          </a>
         </div>
       </div>
     </section>
+
+  
+
+    <footer id="footer">
+      <div class="col col1">
+        <h3>CoolSite</h3>
+        <p>Made with <span style="color: #BA6573;">❤</span> by Jux</p>
+        <div class="social">
+          <a href="https://codepen.io/Juxtopposed" target="_blank" class="link"><img src="https://assets.codepen.io/9051928/codepen_1.png" alt="" /></a>
+          <a href="https://twitter.com/juxtopposed" target="_blank" class="link"><img src="https://assets.codepen.io/9051928/x.png" alt="" /></a>
+          <a href="https://youtube.com/@juxtopposed" target="_blank" class="link"><img src="https://assets.codepen.io/9051928/youtube_1.png" alt="" /></a>
+        </div>
+        <p style="color: #818181; font-size: smaller">2024 © All Rights Reserved</p>
+      </div>
+      <div class="col col2">
+        <p>About</p>
+        <p>Our mission</p>
+        <p>Privacy Policy</p>
+        <p>Terms of service</p>
+      </div>
+      <div class="col col3">
+        <p>Services</p>
+        <p>Products</p>
+        <p>Join our team</p>
+        <p>Partner with us</p>
+      </div>
+      <div class="backdrop"></div>
+    </footer>
 
   </main>
 
   <div id="preloader">
     <div id="loader"></div>
   </div>
-
   <!-- Enlace js -->
   <script src="js/jquery-2.1.3.min.js"></script> <!-- Mueve jQuery al principio -->
   <script src="js/particles.min.js"></script>
