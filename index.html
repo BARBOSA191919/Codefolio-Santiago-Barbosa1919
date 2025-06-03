@@ -231,6 +231,19 @@
                 </span>
               </a>
             </div>
+
+            <!-- WhatsApp -->
+            <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <div class="absolute hidden group-hover:block bg-black/80 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-white">
+                WhatsApp
+                <span class="absolute left-1/2 bottom-[-6px] transform -translate-x-1/2 rotate-45 bg-black/80 w-3 h-3 border-2 border-white"></span>
+              </div>
+              <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="whatsapp" target="_blank" href="https://wa.me/573217696864">
+                <span class="w-16 h-16 p-2 bg-black/75 hover:bg-[#25D366] rounded-full shadow-xl flex items-center justify-center">
+                  <i class="fab fa-whatsapp text-2xl text-white"></i>
+                </span>
+              </a>
+            </div>
             </div>
           </div>
         </div>
@@ -278,6 +291,16 @@
               <ion-icon name="logo-html5"></ion-icon>
               <ion-icon name="logo-css3"></ion-icon>
             </div>
+            <div class="project-buttons">
+              <a href="#" class="btn-code" target="_blank">
+                <i class="fas fa-code"></i>
+                Ver código
+              </a>
+              <a href="#" class="btn-demo" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
+            </div>
           </div>
 
           <div data-aos="fade-up-right" class="card left">
@@ -296,6 +319,16 @@
               <ion-icon name="logo-javascript"></ion-icon>
               <ion-icon name="logo-html5"></ion-icon>
               <ion-icon name="logo-css3"></ion-icon>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn-code" target="_blank">
+                <i class="fas fa-code"></i>
+                Ver código
+              </a>
+              <a href="#" class="btn-demo" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
             </div>
           </div>
 
@@ -316,6 +349,16 @@
               <ion-icon name="logo-html5"></ion-icon>
               <ion-icon name="logo-css3"></ion-icon>
             </div>
+            <div class="project-buttons">
+              <a href="#" class="btn-code" target="_blank">
+                <i class="fas fa-code"></i>
+                Ver código
+              </a>
+              <a href="#" class="btn-demo" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
+            </div>
           </div>
 
           <div data-aos="fade-up" data-aos-anchor-placement="top-center" class="card left">
@@ -334,6 +377,16 @@
               <ion-icon name="logo-javascript"></ion-icon>
               <ion-icon name="logo-html5"></ion-icon>
               <ion-icon name="logo-css3"></ion-icon>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn-code" target="_blank">
+                <i class="fas fa-code"></i>
+                Ver código
+              </a>
+              <a href="#" class="btn-demo" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
             </div>
           </div>
 
@@ -354,6 +407,16 @@
               <ion-icon name="logo-html5"></ion-icon>
               <ion-icon name="logo-css3"></ion-icon>
             </div>
+            <div class="project-buttons">
+              <a href="#" class="btn-code" target="_blank">
+                <i class="fas fa-code"></i>
+                Ver código
+              </a>
+              <a href="#" class="btn-demo" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
+            </div>
           </div>
 
           <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="card left">
@@ -372,6 +435,16 @@
               <ion-icon name="logo-javascript"></ion-icon>
               <ion-icon name="logo-html5"></ion-icon>
               <ion-icon name="logo-css3"></ion-icon>
+            </div>
+            <div class="project-buttons">
+              <a href="#" class="btn-code" target="_blank">
+                <i class="fas fa-code"></i>
+                Ver código
+              </a>
+              <a href="#" class="btn-demo" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
             </div>
           </div>
           </div>
@@ -608,183 +681,177 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // Optimizar AOS inicialización
     AOS.init({
       duration: 1200,
+      once: true, // Las animaciones solo se ejecutan una vez
+      disable: 'mobile', // Deshabilitar en móviles para mejor rendimiento
+      startEvent: 'DOMContentLoaded'
     });
+
+    // Optimizar el preloader
     Pace.on('done', function () {
       document.querySelector('.pace').style.display = 'none';
     });
 
-
+    // Optimizar el array de skills
     const skills = [
-      { color: "#6834a6", image: "./Assets/images/slider1.jpg" },
-      { color: "#6834a6", image: "./Assets/images/slider2.jpg" },
-      { color: "#6834a6", image: "./Assets/images/slider3.png" },
-      { color: "#6834a6", image: "./Assets/images/slider4.png" },
-      { color: "#6834a6", image: "./Assets/images/slider5.png" },
-      { color: "#6834a6", image: "./Assets/images/slider6.jpg" },
-      { color: "#6834a6", image: "./Assets/images/slider7.jpg" },
-      { color: "#6834a6", image: "./Assets/images/slider8.png" },
-      { color: "#6834a6", image: "./Assets/images/slider9.jpg" },
-      { color: "#6834a6", image: "./Assets/images/slider10.jpg" }
+      { color: "#f7df1e", image: "./Assets/images/slider1.jpg", url: "https://developer.mozilla.org/es/docs/Web/JavaScript", name: "JavaScript" },
+      { color: "#e34f26", image: "./Assets/images/slider2.jpg", url: "https://developer.mozilla.org/es/docs/Web/HTML", name: "HTML5" },
+      { color: "#1572b6", image: "./Assets/images/slider3.png", url: "https://developer.mozilla.org/es/docs/Web/CSS", name: "CSS3" },
+      { color: "#61dafb", image: "./Assets/images/slider4.png", url: "https://react.dev/", name: "React" },
+      { color: "#dd0031", image: "./Assets/images/slider5.png", url: "https://angular.io/docs", name: "Angular" },
+      { color: "#ff5e00", image: "./Assets/images/slider6.jpg", url: "https://docs.astro.build/", name: "Astro" },
+      { color: "#777bb4", image: "./Assets/images/slider7.jpg", url: "https://www.php.net/docs.php", name: "PHP" },
+      { color: "#4479a1", image: "./Assets/images/slider8.png", url: "https://dev.mysql.com/doc/", name: "MySQL" },
+      { color: "#007396", image: "./Assets/images/slider9.jpg", url: "https://docs.oracle.com/en/java/", name: "Java" },
+      { color: "#88ce02", image: "./Assets/images/slider10.jpg", url: "https://greensock.com/docs/", name: "GSAP" },
+      { color: "#764abc", image: "./Assets/images/slider11.jpg", url: "https://redux.js.org/", name: "Redux" },
+      { color: "#339933", image: "./Assets/images/slider12.jpg", url: "https://nodejs.org/docs/", name: "Node.js" },
+      { color: "#000000", image: "./Assets/images/slider13.jpg", url: "https://git-scm.com/doc", name: "Git" },
+      { color: "#f05032", image: "./Assets/images/slider14.jpg", url: "https://docs.github.com/", name: "GitHub" },
+      { color: "#7952b3", image: "./Assets/images/slider15.jpg", url: "https://getbootstrap.com/docs/", name: "Bootstrap" }
     ];
 
+    // Optimizar el renderizado de las cards
     document.addEventListener("DOMContentLoaded", () => {
       const container = document.querySelector("#competenciasDesktop .skills-container");
       const cardsContainer = document.querySelector("#competenciasDesktop .cards-container");
 
       if (!container || !cardsContainer) {
-        console.error("Contenedor no encontrado: Verifica que .skills-container y .cards-container existan en #competenciasDesktop");
+        console.error("Contenedor no encontrado");
         return;
       }
 
-      // Crear cursor de luz
-      const cursorLight = document.createElement("div");
-      cursorLight.className = "cursor-light";
-      document.body.appendChild(cursorLight);
+      // Crear cursor de luz solo si no es móvil
+      let cursorLight;
+      if (window.innerWidth > 768) {
+        cursorLight = document.createElement("div");
+        cursorLight.className = "cursor-light";
+        document.body.appendChild(cursorLight);
 
-      // Mostrar/ocultar cursor de luz solo en #competenciasDesktop
-      container.addEventListener("mouseenter", () => {
-        cursorLight.style.display = "block";
-      });
-      container.addEventListener("mouseleave", () => {
-        cursorLight.style.display = "none";
-      });
+        container.addEventListener("mouseenter", () => {
+          cursorLight.style.display = "block";
+        });
+        container.addEventListener("mouseleave", () => {
+          cursorLight.style.display = "none";
+        });
 
-      // Crear cards iniciales
+        document.addEventListener("mousemove", (e) => {
+          cursorLight.style.left = `${e.clientX}px`;
+          cursorLight.style.top = `${e.clientY}px`;
+        });
+      }
+
+      // Optimizar la creación de cards
       function createCard(skill) {
         const card = document.createElement("div");
         card.className = "skill-card";
         card.style.setProperty("--glow-color", skill.color);
 
-        // Establecer tiempos de animación aleatorios
-        const glowDuration = 3 + Math.random() * 4; // Entre 3 y 7 segundos
-        const glowDelay = Math.random() * -5; // Inicio aleatorio
+        const glowDuration = 3 + Math.random() * 4;
+        const glowDelay = Math.random() * -5;
 
         card.style.setProperty("--glow-duration", `${glowDuration}s`);
         card.style.setProperty("--glow-delay", `${glowDelay}s`);
 
-        card.innerHTML = `<img class="card-image" src="${skill.image}" alt="Skill image">`;
+        card.innerHTML = `
+          <div class="skill-content">
+            <img class="card-image" src="${skill.image}" alt="${skill.name}" loading="lazy">
+            <div class="skill-name">${skill.name}</div>
+          </div>
+        `;
+
+        card.addEventListener("click", () => {
+          window.open(skill.url, "_blank");
+        });
 
         return card;
       }
 
-      // Crear tres conjuntos de cards para un scroll infinito fluido
+      // Optimizar la inicialización de cards
       function initializeCards() {
         cardsContainer.innerHTML = "";
-        for (let i = 0; i < 3; i++) {
+        const fragment = document.createDocumentFragment();
+        
+        // Reducir el número de cards en móvil
+        const iterations = window.innerWidth <= 768 ? 2 : 3;
+        
+        for (let i = 0; i < iterations; i++) {
           skills.forEach((skill) => {
             const card = createCard(skill);
-            cardsContainer.appendChild(card);
+            fragment.appendChild(card);
           });
         }
+        
+        cardsContainer.appendChild(fragment);
       }
 
       initializeCards();
 
-      // Manejar movimiento del cursor
-      document.addEventListener("mousemove", (e) => {
-        cursorLight.style.left = `${e.clientX}px`;
-        cursorLight.style.top = `${e.clientY}px`;
-      });
-
-      // Animación de scroll infinito
+      // Optimizar la animación de scroll
       let scrollPosition = 0;
-      const scrollSpeed = 2;
-      const cardWidth =
-        skills.length *
-        (parseInt(
-          getComputedStyle(document.documentElement).getPropertyValue("--card-width")
-        ) +
-          parseInt(
-            getComputedStyle(document.documentElement).getPropertyValue("--card-spacing")
-          ));
+      const scrollSpeed = window.innerWidth <= 768 ? 1 : 2; // Velocidad más lenta en móvil
+      const cardWidth = skills.length * (parseInt(getComputedStyle(document.documentElement).getPropertyValue("--card-width")) + 
+                                      parseInt(getComputedStyle(document.documentElement).getPropertyValue("--card-spacing")));
 
+      let animationFrame;
       function animate() {
         scrollPosition += scrollSpeed;
         if (scrollPosition >= cardWidth) {
           scrollPosition = 0;
         }
         cardsContainer.style.transform = `translateX(-${scrollPosition}px)`;
-        requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate);
       }
 
-      animate();
+      // Iniciar animación solo si es visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animationFrame = requestAnimationFrame(animate);
+          } else {
+            cancelAnimationFrame(animationFrame);
+          }
+        });
+      });
+
+      observer.observe(container);
+
+      // Limpiar al desmontar
+      return () => {
+        cancelAnimationFrame(animationFrame);
+        observer.disconnect();
+      };
     });
-    
-    document.addEventListener("DOMContentLoaded", () => {
-  // Configurar Lenis para desplazamiento suave
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-  });
 
-  function raf(time) {
-    lenis.raf(time);
-    ScrollTrigger.update(); // Actualizar ScrollTrigger con Lenis
-    requestAnimationFrame(raf);
-  }
+    // Optimizar el footer
+    const footer = document.getElementById('footer');
+    let ticking = false;
 
-  requestAnimationFrame(raf);
-
-  // Asegurar que el footer esté oculto inicialmente
-  gsap.set("#footer [data-animate], #footer [data-animate-backdrop]", {
-    opacity: 0,
-    y: 50,
-    scale: 0.95, // Ligeramente reducido para efecto dinámico
-  });
-
-  // Animación del footer con GSAP y ScrollTrigger
-  gsap.to("#footer [data-animate-backdrop]", {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    duration: 0.8,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: "#contacto",
-      start: "bottom bottom+=150", // Activa 150px después del final de contacto
-      toggleActions: "play none none reverse",
-    },
-  });
-
-  gsap.to("#footer [data-animate]", {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    duration: 0.6,
-    stagger: 0.15, // Animación escalonada para cada columna
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: "#contacto",
-      start: "bottom bottom+=150",
-      toggleActions: "play none none reverse",
-    },
-  });
-});
-
-const footer = document.getElementById('footer');
-
-  function checkFooterVisibility() {
-    const scrollBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
-    if (scrollBottom) {
-      footer.classList.remove('footer-hidden');
-      footer.classList.add('footer-visible');
-    } else {
-      footer.classList.remove('footer-visible');
-      footer.classList.add('footer-hidden');
+    function checkFooterVisibility() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
+          if (scrollBottom) {
+            footer.classList.remove('footer-hidden');
+            footer.classList.add('footer-visible');
+          } else {
+            footer.classList.remove('footer-visible');
+            footer.classList.add('footer-hidden');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     }
-  }
 
-  window.addEventListener('scroll', checkFooterVisibility);
-  window.addEventListener('resize', checkFooterVisibility);
+    // Usar passive event listener para mejor rendimiento
+    window.addEventListener('scroll', checkFooterVisibility, { passive: true });
+    window.addEventListener('resize', checkFooterVisibility, { passive: true });
 
-  // Initial check to hide footer
-  checkFooterVisibility();
-
-
+    // Initial check
+    checkFooterVisibility();
   </script>
 </body>
-
 </html>

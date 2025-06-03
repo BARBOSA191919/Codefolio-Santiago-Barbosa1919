@@ -929,29 +929,50 @@ section#competenciasDesktop {
   position: relative;
   width: var(--card-width);
   height: var(--card-height);
-  background: rgba(0, 5, 15, 0.95);
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
-  transition: transform 0.15s ease;
-  will-change: transform, opacity;
-  animation: float 2s ease-in-out infinite,
-             autonomous-glow var(--glow-duration, 3s) ease-in-out infinite var(--glow-delay, 0s);
-  --glow-color: #0066ff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#competenciasDesktop .skill-card::before {
-  content: "";
+#competenciasDesktop .skill-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#competenciasDesktop .skill-name {
   position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+#competenciasDesktop .skill-card:hover .skill-name {
+  transform: translateY(0);
+}
+
+#competenciasDesktop .skill-card:hover {
+  transform: scale(1.08);
+  background: rgba(0, 5, 15, 0.6);
+}
+
+#competenciasDesktop .skill-card:hover .card-image {
+  opacity: 0.7;
+  transform: scale(1.15);
+  filter: brightness(0.8);
 }
 
 #competenciasDesktop .card-image {
@@ -2955,4 +2976,138 @@ footer {
   .footer-phrase {
     font-size: 1.1rem;
   }
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.btn-code, .btn-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.btn-code {
+  background-color: #2d2d2d;
+  color: #fff;
+  border: 1px solid #404040;
+}
+
+.btn-code:hover {
+  background-color: #404040;
+  transform: translateY(-2px);
+}
+
+.btn-demo {
+  background-color: #0077B5;
+  color: #fff;
+  border: 1px solid #006699;
+}
+
+.btn-demo:hover {
+  background-color: #006699;
+  transform: translateY(-2px);
+}
+
+.btn-code i, .btn-demo i {
+  font-size: 1rem;
+}
+
+/* Optimizaciones de rendimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimizar animaciones para móvil */
+@media (max-width: 768px) {
+  .skill-card {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .skill-card:hover {
+    transform: none !important;
+  }
+
+  .skill-card:hover .card-image {
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .cursor-light {
+    display: none !important;
+  }
+
+  .skill-name {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Optimizar renderizado */
+.skill-card {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card-image {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Optimizar animaciones */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes autonomous-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--glow-color);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--glow-color);
+  }
+}
+
+/* Optimizar transiciones */
+.skill-card {
+  transition: transform 0.3s ease-out;
+}
+
+.skill-name {
+  transition: transform 0.3s ease-out;
+}
+
+/* Optimizar contenedor de skills */
+.skills-container {
+  contain: content;
+  content-visibility: auto;
+}
+
+.cards-container {
+  contain: layout style paint;
 }
