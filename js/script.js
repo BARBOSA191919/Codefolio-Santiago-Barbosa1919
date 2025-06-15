@@ -571,3 +571,58 @@ if(navClose) {
         navMenu.classList.remove('show-sidebar');
     })
 }
+
+// Función para inicializar las animaciones de letras
+function initializeWordAnimations() {
+  const wordSections = document.querySelectorAll('.word');
+  
+  wordSections.forEach(section => {
+    const spans = section.querySelectorAll('span');
+    
+    spans.forEach((span, idx) => {
+      // Animación inicial
+      setTimeout(() => {
+        span.classList.add('active');
+      }, 750 * (idx + 1));
+      
+      // Evento click
+      span.addEventListener('click', (e) => {
+        e.target.classList.add('active');
+      });
+      
+      // Limpiar clase active después de la animación
+      span.addEventListener('animationend', (e) => {
+        e.target.classList.remove('active');
+      });
+    });
+  });
+}
+
+// Inicializar animaciones cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  initializeWordAnimations();
+});
+
+// Reinicializar animaciones cuando se hace scroll a una sección
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const wordSection = entry.target.querySelector('.word');
+      if (wordSection) {
+        const spans = wordSection.querySelectorAll('span');
+        spans.forEach((span, idx) => {
+          setTimeout(() => {
+            span.classList.add('active');
+          }, 750 * (idx + 1));
+        });
+      }
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+// Observar todas las secciones con animación de letras
+document.querySelectorAll('#competenciasDesktop, #about, #contacto').forEach(section => {
+  observer.observe(section);
+});
