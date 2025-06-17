@@ -21,6 +21,131 @@
   --heading-font: 'Space Grotesk', sans-serif;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  min-height: 100svh;
+  overflow-x: hidden;
+  overflow: hidden; /* prevent horizontal scrolling initially */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-main-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  transform: scale(1.25);
+  background-image: url("/Assets/img/logo_white.svg");
+  background-size: 1000vh;
+  background-position: 50% 41.7%;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-bottom: 200px;
+}
+
+.hero-main-image {
+  width: 100%;
+  height: 100vh;
+  /* transform: scale(1.25); */
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.hero-main-logo {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.hero-text-logo-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  object-fit: cover;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-image: url("/Assets/img/gta_logo_purple.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 41.7%;
+  background-size: 28vh;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-bottom: 200px;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+}
+
+/* Scroll Indicator Styles */
+.scroll-indicator {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34px;
+  height: 14px;
+  z-index: 10;
+}
+
+.scroll-indicator svg {
+  color: #ffb0c4;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text {
+  color: #ffb0c4;
+  text-align: center;
+  text-transform: uppercase;
+  background-image: radial-gradient(
+    circle at 50% 200vh,
+    rgba(255, 214, 135, 0) 0,
+    rgba(157, 47, 106, 0.5) 90vh,
+    rgba(157, 47, 106, 0.8) 120vh,
+    rgba(32, 31, 66, 0) 150vh
+  );
+  -webkit-text-fill-color: transparent;
+  font-size: 4.5rem;
+  background-clip: text;
+  width: 100%;
+  line-height: 0.9;
+  margin-top: 55%;
+}
+
+
 *,
 *:before,
 *:after {
@@ -474,71 +599,155 @@ section {
 
 /* HOME ============================== */
 
-.fondo-home {
-  width: min(130rem, 100%);
-  margin-inline: auto;
-
-  padding-inline: 2.4rem;
+#home {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
 }
 
-#home {
+.fondo-home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 
-.video video {
-  position: fixed;
+.video {
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
-  object-fit: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  z-index: 1;
+}
+
+.video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   filter: brightness(0.8);
 }
 
 .content {
+  position: relative;
+  z-index: 10;
   display: flex;
-  gap: 5rem;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  min-height: 100vh; /* Use min-height instead of height to allow content to expand */
-  padding: 0rem 0; /* Add padding to prevent content from sticking to edges */
-  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
-#home .content .text {
+.text {
+  color: #fff;
+  text-align: center;
+  z-index: 3;
+}
+
+.parrafo-HELLO {
+  margin-bottom: 2rem;
+}
+
+.letras {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.letras p {
+  margin: 0;
+  padding: 0;
+}
+.mt-6 {
+  margin-top: 5.5rem;
+}
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 1 !important;
+}
+
+.social-icons a {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  width: 100%; /* Ensure it takes full width for centering */
-  padding: 1rem;
-
+  transition: all 0.3s ease;
 }
 
-#home .content .text .parrafo {
-  align-items: center;
-  display: block;
-  opacity: 1;
-  color: #fff; 
+.social-icons a:hover {
+  transform: scale(1.1);
 }
 
-#home .social-links {
-  margin-top: 3rem;
+.social-icons .in:hover {
+  background-color: #0077b5;
+}
+
+.social-icons .git:hover {
+  background-color: #333;
+}
+
+.social-icons .ig:hover {
+  background-color: #e1306c;
+}
+
+.social-icons .discord:hover {
+  background-color: #7289da;
+}
+
+.social-icons .whatsapp:hover {
+  background-color: #25D366;
+}
+
+.social-icons svg,
+.social-icons i {
+  color: #fff !important;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover svg,
+.social-icons a:hover i {
+  color: #fff !important;
+}
+
+.arrow-position {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.arrow {
   display: flex;
   align-items: center;
-  gap: 3rem;
-
-  position: sticky;
-  top: 100px;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
 }
 
-#home .social-links svg {
-  filter: drop-shadow(2px 4px 20px #006ddd);
-  animation: move 2.5s infinite ease-in-out;
-  transition: all 200ms ease-in-out;
+.arrow:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #home .social-links a svg:hover {
@@ -1892,6 +2101,7 @@ section#competenciasDesktop {
 /*about me*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Turret+Road:wght@200;300;400;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,300,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
     --hue-color: 242;
@@ -1899,7 +2109,7 @@ section#competenciasDesktop {
     --mirage-color: hsl(210, 10%, 23%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 85%);
-    --body-color: hsl(var(--hue-color), 19%, 5%);
+    --body-color: hsl(var(--hue-color), 30%, 0%);
     --box-color: hsl(var(--hue-color), 14%, 10%);
     --scroll-box-color: hsl(var(--hue-color), 12%, 38%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 26%);
@@ -3330,4 +3540,23 @@ footer {
 
 .cards-container {
   contain: layout style paint;
+}
+
+
+
+.social-icons {
+  margin-top: 4rem !important;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajuste específico para el icono de WhatsApp */
+.whatsapp i {
+  font-size: 3rem !important;
+}
+
+.whatsapp span {
+  padding: 1.5rem !important;
 }

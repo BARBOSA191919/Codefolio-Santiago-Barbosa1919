@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/style.css">
@@ -19,10 +20,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-
   <script src="https://cdn.tailwindcss.com"></script>
-
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
@@ -64,13 +62,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
-  <!-- ID particles-js -->
-  <div id="particles-js"></div>
 
+  <div id="particles-js"></div>
   <nav id="navbar">
     <div class="nav-content">
       <ul>
@@ -123,7 +119,6 @@
         </div>
       </div>
     </div>
-  
     <div class="bars__menu">
       <span class="line1__bars-menu"></span>
       <span class="line2__bars-menu"></span>
@@ -133,103 +128,127 @@
     </div>
   </nav>
 
+  <div class="container">
+    <div class="overlay"></div>
+    <div class="hero-1-container">
+      <div class="hero-main-container">
+        <img
+          class="hero-main-image"
+          draggable="false"
+          src="/Assets/img/softwaredeveloper.png"
+          alt="gta logo"
+        />
+      </div>
+      <div class="hero-text-logo-container">
+        <div class="hero-text-logo"></div>
+        <div>
+          <h3 class="hero-text">
+            Gracias<br />
+            Por visitar <br />
+            bro
+          </h3>
+        </div>
+      </div>
+    </div>
+
+
   <header id="home">
     <div class="fondo-home">
       <div class="video">
-        <video autoplay loop muted>
+        <video autoplay loop muted playsinline>
           <source src="Assets/video/bg_video.mp4" type="video/mp4">
           <img src="Assets/img/bg_videoImg.jpg" alt="Imagen fondo">
         </video>
+      </div>
   
-        <div class="text content container">
-          <div class="cube">
-            <div class="cube-face cube-face-front">
-          <div class="text">
-            <div class="parrafo-HELLO">
-                <div class="letras">
-                  <p><</p>
-                  <p>H</p>
-                  <p>E</p>
-                  <p>L</p>
-                  <p>L</p>
-                  <p>O</p>
-                  <p> - </p>
-                  <p>W</p>
-                  <p>O</p>
-                  <p>R</p>
-                  <p>L</p>
-                  <p>D</p>
-                  <p>></p>
-                </div>
+      <div class="content container">
+        <div class="text">
+          <div class="parrafo-HELLO">
+            <div class="letras">
+              <p><</p>
+              <p>H</p>
+              <p>E</p>
+              <p>L</p>
+              <p>L</p>
+              <p>O</p>
+              <p> - </p>
+              <p>W</p>
+              <p>O</p>
+              <p>R</p>
+              <p>L</p>
+              <p>D</p>
+              <p>></p>
+            </div>
+          </div>
+          <h1>
+            <span class="letter">S</span><span class="letter">a</span><span class="letter">n</span><span class="letter">t</span><span class="letter">i</span><span class="letter">a</span><span class="letter">g</span><span class="letter">o</span><span class="letter-space"> </span><span class="letter">B</span><span class="letter">a</span><span class="letter">r</span><span class="letter">b</span><span class="letter">o</span><span class="letter">s</span><span class="letter">a</span>
+          </h1>
+          <div class="flex gap-6 mt-6 items-center social-icons">
+            <!-- LinkedIn -->
+            <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <div class="absolute hidden group-hover:block bg-black/85 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-white">
+                LinkedIn
+                <span class="absolute left-1/2 bottom-[-6px] transform -translate-x-1/2 rotate-45 bg-black/80 w-3 h-3 border-2 border-white"></span>
               </div>
-            <h1>
-              <span class="letter">S</span><span class="letter">a</span><span class="letter">n</span><span class="letter">t</span><span class="letter">i</span><span class="letter">a</span><span class="letter">g</span><span class="letter">o</span><span class="letter-space"> </span><span class="letter">B</span><span class="letter">a</span><span class="letter">r</span><span class="letter">b</span><span class="letter">o</span><span class="letter">s</span><span class="letter">a</span>
-            </h1>
-            <div class="flex gap-6 mt-6 items-center social-icons">
-              <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
-                <div class="absolute hidden group-hover:block bg-black/85 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-white">
-                  LinkedIn
-                  <span class="absolute left-1/2 bottom-[-6px] transform -translate-x-1/2 rotate-45 bg-black/80 w-3 h-3 border-2 border-white"></span>
-                </div>
-                <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="in" target="_blank"
-                  href="https://www.linkedin.com/in/santiago-barbosa-903641209/">
-                  <span class="w-16 h-16 p-2 bg-black/60 hover:bg-blue-600 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ease-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25" width="25">
-                      <path stroke="#fff" stroke-linejoin="round" d="M1.5 3.5a2 2 0 1 0 4 0 2 2 0 1 0 -4 0"
-                        stroke-width="1">
-                      </path>
-                      <path stroke="#fff" stroke-linejoin="round" d="M1.5 22.5v-14h4v14h-4Z" clip-rule="evenodd"
-                        stroke-width="1">
-                      </path>
-                      <path stroke="#fff" stroke-linejoin="round"
-                        d="M8 8.5v14h4v-6.908c0 -1.092 1 -3.092 3.895 -3.092 1.643 0 2.605 0.845 2.605 2.5v7.5h4V15c0 -1.309 -0.312 -2.937 -1.394 -4.277 -1.144 -1.417 -2.913 -2.223 -5.21 -2.223 -1.513 0 -2.835 0.615 -3.896 1.366V8.5H8Z"
-                        clip-rule="evenodd" stroke-width="1"></path>
-                    </svg>
-                  </span>
-                </a>
+              <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="in" target="_blank"
+                href="https://www.linkedin.com/in/santiago-barbosa-903641209/">
+                <span class="w-16 h-16 p-2 bg-black/60 hover:bg-blue-600 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ease-out">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25" width="25">
+                    <path stroke="#fff" stroke-linejoin="round" d="M1.5 3.5a2 2 0 1 0 4 0 2 2 0 1 0 -4 0"
+                      stroke-width="1">
+                    </path>
+                    <path stroke="#fff" stroke-linejoin="round" d="M1.5 22.5v-14h4v14h-4Z" clip-rule="evenodd"
+                      stroke-width="1">
+                    </path>
+                    <path stroke="#fff" stroke-linejoin="round"
+                      d="M8 8.5v14h4v-6.908c0 -1.092 1 -3.092 3.895 -3.092 1.643 0 2.605 0.845 2.605 2.5v7.5h4V15c0 -1.309 -0.312 -2.937 -1.394 -4.277 -1.144 -1.417 -2.913 -2.223 -5.21 -2.223 -1.513 0 -2.835 0.615 -3.896 1.366V8.5H8Z"
+                      clip-rule="evenodd" stroke-width="1"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <div class="absolute hidden group-hover:block bg-black/80 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-white">
+                GitHub
+                <span class="absolute left-1/2 bottom-[-6px] transform -translate-x-1/2 rotate-45 bg-black/80 w-3 h-3 border-2 border-white"></span>
               </div>
-  
-              <!-- GitHub -->
-              <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
-                <div class="absolute hidden group-hover:block bg-black/80 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-white">
-                  GitHub
-                  <span class="absolute left-1/2 bottom-[-6px] transform -translate-x-1/2 rotate-45 bg-black/80 w-3 h-3 border-2 border-white"></span>
-                </div>
-                <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="git" target="_blank"
-                  href="https://github.com/BARBOSA191919">
-                  <span class="w-16 h-16 p-2 bg-black/60 hover:bg-gray-800 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ease-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                      <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
-                        d="M11.996 1.771a10.486 10.486 0 0 0 -3.314 20.438c0.523 0.092 0.69 -0.216 0.69 -0.493 0 -0.25 0.005 -0.945 0 -1.824 -2.919 0.633 -3.522 -1.381 -3.522 -1.381a2.775 2.775 0 0 0 -1.163 -1.534c-0.952 -0.65 0.071 -0.638 0.071 -0.638a2.201 2.201 0 0 1 1.607 1.08 2.232 2.232 0 0 0 3.05 0.871c0.05 -0.53 0.285 -1.025 0.666 -1.397 -2.328 -0.266 -4.776 -1.165 -4.776 -5.184a4.055 4.055 0 0 1 1.08 -2.815 3.762 3.762 0 0 1 0.103 -2.774s0.882 -0.282 2.883 1.076a9.924 9.924 0 0 1 5.252 0c2.007 -1.357 2.881 -1.076 2.881 -1.076 0.387 0.878 0.424 1.87 0.104 2.774a4.05 4.05 0 0 1 1.079 2.816c0 4.03 -2.452 4.916 -4.789 5.174a2.487 2.487 0 0 1 0.718 1.933v2.904c0 0.28 0.17 0.59 0.702 0.488a10.487 10.487 0 0 0 -3.322 -20.438v0Z"
-                        stroke-width="1"></path>
-                    </svg>
-                  </span>
-                </a>
+              <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="git" target="_blank"
+                href="https://github.com/BARBOSA191919">
+                <span class="w-16 h-16 p-2 bg-black/60 hover:bg-gray-800 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ease-out">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                      d="M11.996 1.771a10.486 10.486 0 0 0 -3.314 20.438c0.523 0.092 0.69 -0.216 0.69 -0.493 0 -0.25 0.005 -0.945 0 -1.824 -2.919 0.633 -3.522 -1.381 -3.522 -1.381a2.775 2.775 0 0 0 -1.163 -1.534c-0.952 -0.65 0.071 -0.638 0.071 -0.638a2.201 2.201 0 0 1 1.607 1.08 2.232 2.232 0 0 0 3.05 0.871c0.05 -0.53 0.285 -1.025 0.666 -1.397 -2.328 -0.266 -4.776 -1.165 -4.776 -5.184a4.055 4.055 0 0 1 1.08 -2.815 3.762 3.762 0 0 1 0.103 -2.774s0.882 -0.282 2.883 1.076a9.924 9.924 0 0 1 5.252 0c2.007 -1.357 2.881 -1.076 2.881 -1.076 0.387 0.878 0.424 1.87 0.104 2.774a4.05 4.05 0 0 1 1.079 2.816c0 4.03 -2.452 4.916 -4.789 5.174a2.487 2.487 0 0 1 0.718 1.933v2.904c0 0.28 0.17 0.59 0.702 0.488a10.487 10.487 0 0 0 -3.322 -20.438v0Z"
+                      stroke-width="1"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <!-- Instagram -->
+            <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
+              <div class="absolute hidden group-hover:block bg-black/80 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-white">
+                Instagram
+                <span class="absolute left-1/2 bottom-[-6px] transform -translate-x-1/2 rotate-45 bg-black/80 w-3 h-3 border-2 border-white"></span>
               </div>
-  
-              <!-- Instagram -->
-              <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
-                <div class="absolute hidden group-hover:block bg-black/80 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-whiteborder-2 border-white">
-                  Instagram
-                  <span class="absolute left-1/2 bottom-[-6px] transform -translate-x-1/2 rotate-45 bg-black/80 w-3 h-3 border-2 border-white"></span>
-                </div>
-                <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="ig" target="_blank"
-                  href="https://www.instagram.com/sbarbosarivas/">
-                  <span class="w-16 h-16 p-2 bg-black/60 hover:bg-pink-600 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ease-out">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
-                      <path stroke="#fff" stroke-linejoin="round" d="M18 6.5a0.5 0.5 0 0 1 0 -1" stroke-width="1"></path>
-                      <path stroke="#fff" stroke-linejoin="round" d="M18 6.5a0.5 0.5 0 0 0 0 -1" stroke-width="1"></path>
-                      <path stroke="#fff" stroke-linejoin="round" d="M7 12a5 5 0 1 0 10 0 5 5 0 1 0 -10 0" stroke-width="1">
-                      </path>
-                      <path stroke="#fff"
-                        d="M16.5 1.5h-9a6 6 0 0 0 -6 6v9a6 6 0 0 0 6 6h9a6 6 0 0 0 6 -6v-9a6 6 0 0 0 -6 -6Z"
-                        stroke-width="1"></path>
-                    </svg>
-                  </span>
-                </a>
-              </div>
-  
-                <!-- Discord (Nuevo) -->
+              <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="ig" target="_blank"
+                href="https://www.instagram.com/sbarbosarivas/">
+                <span class="w-16 h-16 p-2 bg-black/60 hover:bg-pink-600 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ease-out">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24" width="24">
+                    <path stroke="#fff" stroke-linejoin="round" d="M18 6.5a0.5 0.5 0 0 1 0 -1" stroke-width="1"></path>
+                    <path stroke="#fff" stroke-linejoin="round" d="M18 6.5a0.5 0.5 0 0 0 0 -1" stroke-width="1"></path>
+                    <path stroke="#fff" stroke-linejoin="round" d="M7 12a5 5 0 1 0 10 0 5 5 0 1 0 -10 0" stroke-width="1">
+                    </path>
+                    <path stroke="#fff"
+                      d="M16.5 1.5h-9a6 6 0 0 0 -6 6v9a6 6 0 0 0 6 6h9a6 6 0 0 0 6 -6v-9a6 6 0 0 0 -6 -6Z"
+                      stroke-width="1"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <!-- Discord -->
             <div class="relative group mx-2 flex flex-col items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
               <div class="absolute hidden group-hover:block bg-black/80 text-white text-lg font-medium py-0 px-2 rounded-xl shadow-lg -top-12 z-10 border-2 border-white">
                 Discord
@@ -237,10 +256,9 @@
               </div>
               <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="discord" target="_blank" href="https://discord.gg/ChznPA5q">
                 <span class="w-16 h-16 p-2 bg-black/75 hover:bg-[#8c9eff] rounded-full shadow-xl flex items-center justify-center">
-                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24">
+                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24">
                     <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.30z"/>
                   </svg>
-                </span>
                 </span>
               </a>
             </div>
@@ -252,27 +270,27 @@
                 <span class="absolute left-1/2 bottom-[-6px] transform -translate-x-1/2 rotate-45 bg-black/80 w-3 h-3 border-2 border-white"></span>
               </div>
               <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="whatsapp" target="_blank" href="https://wa.me/573217696864">
-                <span class="w-16 h-16 p-5 bg-black/75 hover:bg-[#25D366] rounded-full shadow-xl flex items-center justify-center">
-                  <i class="fab fa-whatsapp text-5xl text-white"></i>
+                <span class="w-20 h-20 p-4 bg-black/75 hover:bg-[#25D366] rounded-full shadow-xl flex items-center justify-center">
+                  <i class="fab fa-whatsapp text-4xl text-white"></i>
                 </span>
               </a>
             </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="arrow-position">
-          <a class="arrow" href="#projects">
-            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#fff" viewBox="0 0 256 256">
-              <path
-                d="M213.66,122.34a8,8,0,0,1,0,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,196.69l74.34-74.35A8,8,0,0,1,213.66,122.34Zm-91.32,11.32a8,8,0,0,0,11.32,0l80-80a8,8,0,0,0-11.32-11.32L128,116.69,53.66,42.34A8,8,0,0,0,42.34,53.66Z">
-              </path>
-            </svg>
-          </a>
           </div>
         </div>
       </div>
+      </div>
+      <div class="arrow-position">
+        <a class="arrow" href="#projects">
+          <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#fff" viewBox="0 0 256 256">
+            <path
+              d="M213.66,122.34a8,8,0,0,1,0,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,196.69l74.34-74.35A8,8,0,0,1,213.66,122.34Zm-91.32,11.32a8,8,0,0,0,11.32,0l80-80a8,8,0,0,0-11.32-11.32L128,116.69,53.66,42.34A8,8,0,0,0,42.34,53.66Z">
+            </path>
+          </svg>
+        </a>
+        </div>
+      </div>
     </div>
+  </div>
   </header>
 
   <main>
@@ -924,6 +942,186 @@ spans.forEach((span, idx) => {
     span.classList.add('active');
   }, 750 * (idx + 1));
 });
+gsap.registerPlugin(ScrollTrigger);
+
+// First step
+gsap.from(".hero-main-container", {
+  scale: 1.45,
+  duration: 2.8,
+  ease: "power3.out",
+});
+
+gsap.to(".overlay", {
+  opacity: 0,
+  duration: 2.8,
+  ease: "power3.out",
+  onComplete: () => {
+    document.body.style.overflow = "visible";
+    document.body.style.overflowX = "hidden";
+  },
+});
+
+// Scroll Indicator
+const scrollIndicator = document.querySelector(".scroll-indicator");
+const bounceTimeline = gsap.timeline({
+  repeat: -1,
+  yoyo: true,
+});
+
+bounceTimeline.to(scrollIndicator, {
+  y: 20,
+  opacity: 0.6,
+  duration: 0.8,
+  ease: "power1.inOut",
+});
+
+// Create a timeline for better control
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".container",
+    scrub: 2,
+    pin: true,
+    start: "top top",
+    end: "+=2000",
+    ease: "none",
+  },
+});
+
+// Need to ensure that the scale is like this otherwise some flicks happens
+tl.set(".hero-main-container", {
+  scale: 1.25,
+});
+
+tl.to(".hero-main-container", {
+  scale: 1,
+  duration: 1,
+});
+
+tl.to(
+  ".hero-main-logo",
+  {
+    opacity: 0,
+    duration: 0.5,
+  },
+  "<" // starts at the same time of previous animation
+);
+
+tl.to(
+  ".hero-main-image",
+  {
+    opacity: 0,
+    duration: 0.9,
+  },
+  "<+=0.5"
+);
+
+tl.to(
+  ".hero-main-container",
+  {
+    backgroundSize: "28vh",
+    duration: 1.5,
+  },
+  "<+=0.2"
+);
+
+tl.fromTo(
+  ".hero-text",
+  {
+    backgroundImage: `radial-gradient(
+          circle at 50% 200vh,
+          rgba(255, 214, 135, 0) 0,
+          rgba(157, 47, 106, 0.5) 90vh,
+          rgba(157, 47, 106, 0.8) 120vh,
+          rgba(32, 31, 66, 0) 150vh
+        )`,
+  },
+  {
+    backgroundImage: `radial-gradient(circle at 50% 3.9575vh, rgb(255, 213, 133) 0vh,
+     rgb(247, 77, 82) 50.011vh,
+      rgb(145, 42, 105) 90.0183vh,
+       rgba(32, 31, 66, 0) 140.599vh)`,
+    duration: 3,
+  },
+  "<1.2" // starts 1.2 seconds before the previous animation
+);
+
+// logo purple
+tl.fromTo(
+  ".hero-text-logo",
+
+  {
+    opacity: 0,
+    maskImage: `radial-gradient(circle at 50% 145.835%, rgb(0, 0, 0) 36.11%, rgba(0, 0, 0, 0) 68.055%)`,
+  },
+  {
+    opacity: 1,
+    maskImage: `radial-gradient(
+    circle at 50% 105.594%,
+    rgb(0, 0, 0) 62.9372%,
+    rgba(0, 0, 0, 0) 81.4686%
+  )`,
+    duration: 3,
+  },
+  "<0.2"
+);
+
+tl.set(".hero-main-container", { opacity: 0 });
+
+tl.to(".hero-1-container", { scale: 0.85, duration: 3 }, "<-=3");
+
+tl.set(
+  ".hero-1-container",
+  {
+    maskImage: `radial-gradient(circle at 50% 16.1137vh, rgb(0, 0, 0) 96.1949vh, rgba(0, 0, 0, 0) 112.065vh)`,
+  },
+  "<+=2.1"
+);
+
+tl.to(
+  ".hero-1-container",
+  {
+    maskImage: `radial-gradient(circle at 50% -40vh, rgb(0, 0, 0) 0vh, rgba(0, 0, 0, 0) 80vh)`,
+    duration: 2,
+  },
+  "<+=0.2" // Start 0.2 seconds after the mask is set
+);
+
+tl.to(
+  ".hero-text-logo",
+  {
+    opacity: 0,
+    duration: 2,
+  },
+  "<1.5"
+);
+
+tl.set(".hero-1-container", { opacity: 0 });
+tl.set(".hero-2-container", { visibility: "visible" });
+
+tl.to(".hero-2-container", { opacity: 1, duration: 3 }, "<+=0.2");
+
+tl.fromTo(
+  ".hero-2-container",
+  {
+    backgroundImage: `radial-gradient(
+          circle at 50% 200vh,
+          rgba(255, 214, 135, 0) 0,
+          rgba(157, 47, 106, 0.5) 90vh,
+          rgba(157, 47, 106, 0.8) 120vh,
+          rgba(32, 31, 66, 0) 150vh
+        )`,
+  },
+  {
+    backgroundImage: `radial-gradient(circle at 50% 3.9575vh, rgb(255, 213, 133) 0vh,
+     rgb(247, 77, 82) 50.011vh,
+      rgb(145, 42, 105) 90.0183vh,
+       rgba(32, 31, 66, 0) 140.599vh)`,
+    duration: 3,
+  },
+  "<1.2" // starts 1.2 seconds before the previous animation
+  // he times from the start of the previous animation and since we're using 1.5s for the prev duration it's like 70% of the previous animation
+);
+
   </script>
 </body>
 </html>
