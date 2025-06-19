@@ -67,6 +67,12 @@
 <body>
 
   <div id="particles-js"></div>
+  <div class="video">
+    <video autoplay loop muted playsinline>
+      <source src="Assets/video/bg_video.mp4" type="video/mp4">
+      <img src="Assets/img/bg_videoImg.jpg" alt="Imagen fondo">
+    </video>
+  </div>
   <nav id="navbar">
     <div class="nav-content">
       <ul>
@@ -135,7 +141,7 @@
         <img
           class="hero-main-image"
           draggable="false"
-          src="/Assets/img/softwaredeveloper.png"
+          src="/Assets/img/softwaredeveloperhd.png"
           alt="gta logo"
         />
       </div>
@@ -153,14 +159,6 @@
 
 
   <header id="home">
-    <div class="fondo-home">
-      <div class="video">
-        <video autoplay loop muted playsinline>
-          <source src="Assets/video/bg_video.mp4" type="video/mp4">
-          <img src="Assets/img/bg_videoImg.jpg" alt="Imagen fondo">
-        </video>
-      </div>
-  
       <div class="content container">
         <div class="text">
           <div class="parrafo-HELLO">
@@ -181,7 +179,7 @@
             </div>
           </div>
           <h1>
-            <span class="letter">S</span><span class="letter">a</span><span class="letter">n</span><span class="letter">t</span><span class="letter">i</span><span class="letter">a</span><span class="letter">g</span><span class="letter">o</span><span class="letter-space"> </span><span class="letter">B</span><span class="letter">a</span><span class="letter">r</span><span class="letter">b</span><span class="letter">o</span><span class="letter">s</span><span class="letter">a</span>
+            <span class="letter">S</span><span class="letter">A</span><span class="letter">N</span><span class="letter">T</span><span class="letter">I</span><span class="letter">A</span><span class="letter">G</span><span class="letter">O</span><span class="letter-space"> </span><span class="letter">B</span><span class="letter">A</span><span class="letter">R</span><span class="letter">B</span><span class="letter">O</span><span class="letter">S</span><span class="letter">A</span>
           </h1>
           <div class="flex gap-6 mt-6 items-center social-icons">
             <!-- LinkedIn -->
@@ -276,21 +274,18 @@
               </a>
             </div>
           </div>
-        </div>
-      </div>
-      </div>
-      <div class="arrow-position">
-        <a class="arrow" href="#projects">
-          <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#fff" viewBox="0 0 256 256">
-            <path
-              d="M213.66,122.34a8,8,0,0,1,0,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,196.69l74.34-74.35A8,8,0,0,1,213.66,122.34Zm-91.32,11.32a8,8,0,0,0,11.32,0l80-80a8,8,0,0,0-11.32-11.32L128,116.69,53.66,42.34A8,8,0,0,0,42.34,53.66Z">
-            </path>
-          </svg>
-        </a>
+          <div class="arrow-position">
+            <a class="arrow" href="#projects">
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="#fff" viewBox="0 0 256 256">
+                <path
+                  d="M213.66,122.34a8,8,0,0,1,0,11.32l-80,80a8,8,0,0,1-11.32,0l-80-80a8,8,0,0,1,11.32-11.32L128,196.69l74.34-74.35A8,8,0,0,1,213.66,122.34Zm-91.32,11.32a8,8,0,0,0,11.32,0l80-80a8,8,0,0,0-11.32-11.32L128,116.69,53.66,42.34A8,8,0,0,0,42.34,53.66Z">
+                </path>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </header>
 
   <main>
@@ -967,7 +962,7 @@ const tl = gsap.timeline({
     scrub: 2,
     pin: true,
     start: "top top",
-    end: "+=2000",
+    end: "+=200",
     ease: "none",
   },
 });
