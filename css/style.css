@@ -54,12 +54,13 @@ body {
   height: 100vh;
   position: relative;
   transform: scale(1.25);
-  background-image: url("/Assets/img/logo_white.svg");
+  background-image: url("/Assets/img/Bienvenidos.svg");
   background-size: 1000vh;
   background-position: 50% 41.7%;
   background-repeat: no-repeat;
   background-origin: content-box;
   padding-bottom: 200px;
+
 }
 
 .hero-main-image {
@@ -100,10 +101,10 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url("/Assets/img/gta_logo_purple.webp");
+  background-image: url("/Assets/img/lenguajesbackend.png");
   background-repeat: no-repeat;
   background-position: 50% 41.7%;
-  background-size: 28vh;
+  background-size: 48vh;
   background-repeat: no-repeat;
   background-origin: content-box;
   padding-bottom: 200px;
@@ -853,11 +854,11 @@ section {
 
 @media screen and (max-width: 767px) {
   .content.container {
-      position: absolute;
-      overflow: hidden;
-      z-index: 1;
+    overflow: hidden;
+    z-index: 100; /* un número mayor que el de otros elementos */
+    position: relative;
+}
 
-  }
   .arrow-position{
     position: absolute;
     padding-top: 430px;
@@ -1276,9 +1277,14 @@ section#competenciasDesktop {
   
   .content.container {
     overflow: hidden;
-    z-index: 1;
+    z-index: 100; /* un número mayor que el de otros elementos */
     position: relative;
-  }
+    top: -260px; /* mueve el elemento 20px hacia arriba */
+
+
+
+}
+
   
 
 /* Infinite Scrolling Cards for #competenciasDesktop */
