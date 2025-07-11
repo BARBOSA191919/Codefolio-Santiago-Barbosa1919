@@ -200,39 +200,7 @@ particlesJS("particles-js", {
         window.open("https://discord.gg/ChznPA5q", "_blank");
       });
     
-      // Script para el menú hamburguesa
-      const barsMenu = document.querySelector(".bars__menu");
-      const line1 = document.querySelector(".line1__bars-menu");
-      const line2 = document.querySelector(".line2__bars-menu");
-      const line3 = document.querySelector(".line3__bars-menu");
-      const navLinks = document.querySelector(".nav-content ul");
-    
-      barsMenu.addEventListener("click", () => {
-        line1.classList.toggle("activeline1__bars-menu");
-        line2.classList.toggle("activeline2__bars-menu");
-        line3.classList.toggle("activeline3__bars-menu");
-        navLinks.classList.toggle("active");
-      });
-    
-      // Función para cerrar el menú
-      function closeMenu() {
-        if (window.innerWidth <= 768) {
-          line1.classList.remove("activeline1__bars-menu");
-          line2.classList.remove("activeline2__bars-menu");
-          line3.classList.remove("activeline3__bars-menu");
-          navLinks.classList.remove("active");
-        }
-      }
-    
-      // Cerrar menú al redimensionar la ventana
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 768) {
-          navLinks.classList.remove("active");
-          line1.classList.remove("activeline1__bars-menu");
-          line2.classList.remove("activeline2__bars-menu");
-          line3.classList.remove("activeline3__bars-menu");
-        }
-      });
+
 
       gsap.registerPlugin(ScrollTrigger);
 
@@ -301,17 +269,6 @@ particlesJS("particles-js", {
         }
       });
       
-      gsap.to("#navbar", {
-        backgroundColor: "rgba(0, 0, 0, 0.9)",
-        duration: 0.5,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#home",
-          start: "top top",
-          end: "bottom top",
-          scrub: true
-        }
-      });
 document.addEventListener("DOMContentLoaded", function () {
   // Seleccionar el h1
   const h1 = document.querySelector(".text h1");
@@ -343,61 +300,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "power2.out",
     stagger: 0.1,
     delay: 1.0 // Ajustado para esperar al preloader
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Seleccionar el h1
-  const h1 = document.querySelector(".text h1");
-  const text = h1.textContent;
-  h1.innerHTML = ""; // Limpiar el contenido original
-
-  // Separar cada letra en un span
-  text.split("").forEach(char => {
-    const span = document.createElement("span");
-    if (char === " ") {
-      span.className = "letter-space";
-      span.innerHTML = "&nbsp;";
-    } else {
-      span.className = "letter";
-      span.textContent = char;
-    }
-    h1.appendChild(span);
-  });
-
-  // Animación GSAP
-  const letters = document.querySelectorAll(".letter");
-  gsap.set(letters, {
-    clipPath: "inset(100% 0 0 0)",
-    opacity: 1
-  });
-  gsap.to(letters, {
-    clipPath: "inset(0% 0 0 0)",
-    duration: 1.2,
-    ease: "power2.out",
-    stagger: 0.1,
-    delay: 1.0 // Ajustado para esperar al preloader
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // Seleccionar todas las letras
-  const letters = document.querySelectorAll(".letter");
-
-  // Configurar estado inicial con GSAP
-  gsap.set(letters, {
-    clipPath: "inset(100% 0 0 0)", // Ocultar desde la parte inferior
-    opacity: 1 // Asegurar visibilidad
-  });
-
-  // Animar cada letra con un efecto escalonado
-  gsap.to(letters, {
-    clipPath: "inset(0% 0 0 0)", // Revelar desde la parte inferior
-    duration: 1.2,
-    ease: "power2.out",
-    stagger: 0.1, // Retraso de 0.1s entre cada letra
-    delay: 0.3 // Retraso inicial para sincronizar con la carga
   });
 });
 

@@ -28,15 +28,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  width: 100vw;
-  min-height: 100svh;
-  overflow-x: hidden;
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
+
 
 .overlay {
   position: fixed;
@@ -101,7 +93,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url("/Assets/img/lenguajesbackend.png");
+  background-image: url("/Assets/img/lenguajesbackend.webp");
   background-repeat: no-repeat;
   background-position: 50% 41.7%;
   background-size: 48vh;
@@ -150,14 +142,6 @@ body {
 }
 
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -184,9 +168,6 @@ body {
   margin: 0 auto;
   width: 90%;
 }
-
-/* Import Playfair Display for elegant typography */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 
 /* Animation for letras */
 .letras {
@@ -229,8 +210,6 @@ p:nth-child(8) {
 }
 
 /*ANIMACION BIENVENIDOS*/
-/* Import Playfair Display for elegant typography */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
 /* Bienvenidos word animation */
 .word {
@@ -1226,54 +1205,48 @@ section#competenciasDesktop {
 }
 
   #navbar {
-    position: relative;
-    z-index: 50;
-    transition: all 0.3s ease;
-  }
-  .header-content, .social-icons {
-    position: relative;
-  }
-  .cube {
-    position: relative;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    width: 100%;
-    height: auto; /* Let the cube adapt to content height */
-    min-height: 50vh; /* Ensure it takes at least the viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cube-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cube-face-front {
-    transform: translateZ(0);
-    background: transparent;
-  }
-  
-  .cube-face-bottom {
-    transform: rotateX(90deg) translateZ(-50vh);
-    background: rgba(26, 26, 26, 0.8);
-    color: #fff;
-    font-size: 24px;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  #navbar {
-    position: relative;
-    z-index: 50;
-    transition: all 0.3s ease;
-  }
+  position: relative;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+.header-content, .social-icons {
+  position: relative;
+}
+.cube {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  width: 100%;
+  height: auto; /* Let the cube adapt to content height */
+  min-height: 50vh; /* Ensure it takes at least the viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube-face-front {
+  transform: translateZ(0);
+  background: transparent;
+}
+
+.cube-face-bottom {
+  transform: rotateX(90deg) translateZ(-50vh);
+  background: rgba(26, 26, 26, 0.8);
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
   
   .content.container {
     overflow: hidden;
@@ -1392,38 +1365,7 @@ section#competenciasDesktop {
   filter: brightness(0.9);
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(var(--float-distance));
-  }
-}
 
-@keyframes autonomous-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 102, 255, 0);
-    filter: brightness(0.9);
-    opacity: 0.9;
-  }
-  50% {
-    box-shadow: 0 0 20px var(--glow-color);
-    filter: brightness(1.3);
-    opacity: 1;
-  }
-}
-
-#competenciasDesktop .skill-card:hover {
-  transform: scale(1.08);
-  background: rgba(0, 5, 15, 0.6);
-}
-
-#competenciasDesktop .skill-card:hover .card-image {
-  opacity: 1;
-  transform: scale(1.15);
-  filter: brightness(1.2);
-}
 
 .cursor-light {
   position: fixed;
@@ -3506,61 +3448,4 @@ footer {
   will-change: transform;
   backface-visibility: hidden;
   transform: translateZ(0);
-}
-
-/* Optimizar animaciones */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes autonomous-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px var(--glow-color);
-  }
-  50% {
-    box-shadow: 0 0 40px var(--glow-color);
-  }
-}
-
-/* Optimizar transiciones */
-.skill-card {
-  transition: transform 0.3s ease-out;
-}
-
-.skill-name {
-  transition: transform 0.3s ease-out;
-}
-
-/* Optimizar contenedor de skills */
-.skills-container {
-  contain: content;
-  content-visibility: auto;
-}
-
-.cards-container {
-  contain: layout style paint;
-}
-
-
-
-.social-icons {
-  margin-top: 4rem !important;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Ajuste específico para el icono de WhatsApp */
-.whatsapp i {
-  font-size: 3rem !important;
-}
-
-.whatsapp span {
-  padding: 1.5rem !important;
 }
