@@ -32,15 +32,24 @@ function closeMenu() {
 // Event listener for hamburger menu click
 hamburger.addEventListener("click", toggleMenu);
 
-/*---------------------------------------------------- */
-/* Preloader
-	------------------------------------------------------ */
-$(window).load(function () {
-  // will first fade out the loading animation
-  $("#loader").fadeOut("slow", function () {
-    // will fade out the whole DIV that covers the website.
-    $("#preloader").delay(300).fadeOut("slow");
-  });
+// Preloader en JavaScript puro
+window.addEventListener('load', function () {
+  var loader = document.getElementById('loader');
+  var preloader = document.getElementById('preloader');
+  if (loader) {
+    loader.style.transition = 'opacity 0.7s';
+    loader.style.opacity = 0;
+    setTimeout(function () {
+      loader.style.display = 'none';
+      if (preloader) {
+        preloader.style.transition = 'opacity 0.7s';
+        preloader.style.opacity = 0;
+        setTimeout(function () {
+          preloader.style.display = 'none';
+        }, 300);
+      }
+    }, 700);
+  }
 });
 
 //Script para las particulas

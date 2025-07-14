@@ -1,0 +1,7 @@
+/* About Section Styles */
+
+.about.section, .about-container, .about-image, .about-data, .about-info, .about-box, .about-heading, .about-description, .about-buttons, .contact-button {
+  /* Aquí van los estilos específicos de la sección Sobre mí */
+}
+
+/* Mueve aquí los media queries y estilos responsivos de la sección About desde style.css */ 
