@@ -228,7 +228,7 @@
 
 .arrow-position {
     position: static;
-    margin-top: 0.5rem;
+    margin-top: 21.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,22 +295,26 @@
 }
 
 .text h1 {
-    font-family: var(--fuentePrincipal);
+    font-family: var(--fuentePrincipal, 'Montserrat', sans-serif);
     font-size: 6rem;
-    padding: 0;
-    margin: 0;
     color: transparent;
-    -webkit-text-stroke: 1px var(--gris);
+    -webkit-text-stroke: 1px var(--gris, #d8d8d8);
     letter-spacing: 1px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    opacity: 1;
 }
 
-.letter {
+letter {
     display: inline-block;
-    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+    transition: opacity 0.5s;
     position: relative;
+}
+
+.letter.active {
+    opacity: 1;
 }
 
 .letter-space {

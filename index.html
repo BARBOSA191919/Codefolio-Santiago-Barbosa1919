@@ -30,9 +30,11 @@
   <link rel="stylesheet" href="css/main.css">
 
   <!-- Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Preconnect para optimizar carga -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -179,8 +181,8 @@
         <div class="text">
           <div class="parrafo-HELLO">
             <div class="letras">
-              <p><
-                </p>
+              <p>
+                < </p>
                   <p>H</p>
                   <p>E</p>
                   <p>L</p>
@@ -318,8 +320,12 @@
               <a data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="whatsapp" target="_blank"
                 href="https://wa.me/573217696864" aria-label="Contactar por WhatsApp">
                 <span
-                  class="w-20 h-20 p-4 bg-black/75 hover:bg-[#25D366] rounded-full shadow-xl flex items-center justify-center">
-                  <i class="fab fa-whatsapp text-4xl text-white" aria-hidden="true"></i>
+                  class="w-14 h-14 p-2 bg-black/75 hover:bg-[#25D366] rounded-full shadow-xl flex items-center justify-center transition-all duration-300 ease-out">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" width="20" height="20"
+                    aria-hidden="true">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.488" />
+                  </svg>
                 </span>
               </a>
             </div>
@@ -605,12 +611,12 @@
                 Demo
               </a>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
       </div>
 
-      
+
     </section>
 
     <section id="competenciasDesktop">
@@ -688,7 +694,7 @@
               <div class="about-box">
                 <i class="fas fa-project-diagram about-icon"></i>
                 <h3 class="about-title">Proyectos</h3>
-                <span class="about-subtitle">5+ Completados</span>
+                <span class="about-subtitle">10+ Completados</span>
               </div>
 
               <div class="about-box">
@@ -833,8 +839,8 @@
         </div>
 
         <div class="contact-cta" data-aos="fade-up" data-aos-duration="800">
-          <a href="mailto:sbarbosarivas@gmail.com" class="btn btn-primary"
-            aria-label="Enviar email a sbarbosarivas@gmail.com">
+          <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBpRhNpTfnQZJrdglZmtrmcMCBTdZFfTxgzLMQrttrMBNrLkxZCGzlXVrZmZNFshGvTHTsz"
+            target="_blank" class="btn btn-primary" aria-label="Enviar email a sbarbosarivas@gmail.com">
             <i class="fas fa-paper-plane" aria-hidden="true"></i>
             Envíame un mensaje
           </a>
@@ -886,400 +892,28 @@
   <div id="preloader">
     <div id="loader"></div>
   </div>
+
+  <div class="portfolio-popup">
+    <span class="portfolio-popup-close">X</span>
+    <div class="pp-thumbnail">
+      <img src="" alt="">
+    </div>
+    <div class="portfolio-popup-subtitle">
+      <span></span>
+    </div>
+    <div class="portfolio-popup-body"></div>
+  </div>
+
   <!-- Enlace js -->
 
   <script src="js/particles.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/plugins.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/pace.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/plugins.js"></script>
+  <script type="module" src="js/main.js"></script>
 
-  <script>
-    // Optimizar AOS inicialización
-    AOS.init({
-      duration: 2000,
-      once: true, // Las animaciones solo se ejecutan una vez
-      disable: 'mobile', // Deshabilitar en móviles para mejor rendimiento
-      startEvent: 'DOMContentLoaded'
-    });
-
-    // Optimizar el preloader
-    Pace.on('done', function () {
-      document.querySelector('.pace').style.display = 'none';
-    });
-
-    // Optimizar el array de skills
-    const skills = [
-      { color: "#f7df1e", image: "./Assets/imagenes-habilidades/bootstrap.avif", url: "https://getbootstrap.com/docs/", name: "Bootstrap" },
-      { color: "#3178c6", image: "./Assets/imagenes-habilidades/typescript.avif", url: "https://www.typescriptlang.org/docs/", name: "TypeScript" },
-      { color: "#1572b6", image: "./Assets/imagenes-habilidades/mysql.avif", url: "https://dev.mysql.com/doc/", name: "MySQL" },
-      { color: "#6db33f", image: "./Assets/imagenes-habilidades/springboot.avif", url: "https://spring.io/projects/spring-boot", name: "Spring Boot" },
-      { color: "#dd0031", image: "./Assets/imagenes-habilidades/angular.avif", url: "https://angular.io/docs", name: "Angular" },
-      { color: "#ff5e00", image: "./Assets/imagenes-habilidades/js.avif", url: "https://developer.mozilla.org/es/docs/Web/JavaScript", name: "JavaScript" },
-      { color: "#e34f26", image: "./Assets/imagenes-habilidades/html.avif", url: "https://developer.mozilla.org/es/docs/Web/HTML", name: "HTML5" },
-      { color: "#1572b6", image: "./Assets/imagenes-habilidades/css.avif", url: "https://developer.mozilla.org/es/docs/Web/CSS", name: "CSS3" },
-      { color: "#007396", image: "./Assets/imagenes-habilidades/java.avif", url: "https://docs.oracle.com/en/java/", name: "Java" },
-      { color: "#777bb4", image: "./Assets/imagenes-habilidades/php.avif", url: "https://www.php.net/docs.php", name: "PHP" },
-      { color: "#339933", image: "./Assets/imagenes-habilidades/node.avif", url: "https://nodejs.org/docs/", name: "Node.js" },
-      { color: "#ff5e00", image: "./Assets/imagenes-habilidades/astro.avif", url: "https://docs.astro.build/", name: "Astro" },
-      { color: "#f05032", image: "./Assets/imagenes-habilidades/git.avif", url: "https://git-scm.com/doc", name: "Git" },
-      { color: "#181717", image: "./Assets/imagenes-habilidades/github.avif", url: "https://docs.github.com/", name: "GitHub" },
-      { color: "#38b2ac", image: "./Assets/imagenes-habilidades/tailwind.avif", url: "https://tailwindcss.com/docs", name: "Tailwind CSS" },
-    ];
-
-    // Optimizar el renderizado de las cards
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.querySelector("#competenciasDesktop .skills-container");
-      const cardsContainer = document.querySelector("#competenciasDesktop .cards-container");
-
-      if (!container || !cardsContainer) {
-        console.error("Contenedor no encontrado");
-        return;
-      }
-
-      // Crear cursor de luz solo si no es móvil
-      let cursorLight;
-      if (window.innerWidth > 768) {
-        cursorLight = document.createElement("div");
-        cursorLight.className = "cursor-light";
-        document.body.appendChild(cursorLight);
-
-        container.addEventListener("mouseenter", () => {
-          cursorLight.style.display = "block";
-        }, { passive: true });
-        container.addEventListener("mouseleave", () => {
-          cursorLight.style.display = "none";
-        }, { passive: true });
-
-        // Throttle mousemove para mejor rendimiento
-        let ticking = false;
-        document.addEventListener("mousemove", (e) => {
-          if (!ticking) {
-            requestAnimationFrame(() => {
-              cursorLight.style.left = `${e.clientX}px`;
-              cursorLight.style.top = `${e.clientY}px`;
-              ticking = false;
-            });
-            ticking = true;
-          }
-        }, { passive: true });
-      }
-
-      // Optimizar la creación de cards
-      function createCard(skill) {
-        const card = document.createElement("div");
-        card.className = "skill-card";
-        card.style.setProperty("--glow-color", skill.color);
-
-        const glowDuration = 3 + Math.random() * 4;
-        const glowDelay = Math.random() * -5;
-
-        card.style.setProperty("--glow-duration", `${glowDuration}s`);
-        card.style.setProperty("--glow-delay", `${glowDelay}s`);
-
-        card.innerHTML = `
-          <div class="skill-content">
-            <img class="card-image" src="${skill.image}" alt="${skill.name}" loading="lazy">
-            <div class="skill-name">${skill.name}</div>
-          </div>
-        `;
-
-        card.addEventListener("click", () => {
-          window.open(skill.url, "_blank", "noopener,noreferrer");
-        });
-
-        return card;
-      }
-
-      // Optimizar la inicialización de cards
-      function initializeCards() {
-        cardsContainer.innerHTML = "";
-        const fragment = document.createDocumentFragment();
-
-        // Reducir el número de cards en móvil
-        const iterations = window.innerWidth <= 768 ? 2 : 3;
-
-        for (let i = 0; i < iterations; i++) {
-          skills.forEach((skill) => {
-            const card = createCard(skill);
-            fragment.appendChild(card);
-          });
-        }
-
-        cardsContainer.appendChild(fragment);
-      }
-
-      initializeCards();
-
-      // Optimizar la animación de scroll
-      let scrollPosition = 0;
-      const scrollSpeed = window.innerWidth <= 768 ? 1 : 2; // Velocidad más lenta en móvil
-      const cardWidth = skills.length * (parseInt(getComputedStyle(document.documentElement).getPropertyValue("--card-width")) +
-        parseInt(getComputedStyle(document.documentElement).getPropertyValue("--card-spacing")));
-
-      let animationFrame;
-      function animate() {
-        scrollPosition += scrollSpeed;
-        if (scrollPosition >= cardWidth) {
-          scrollPosition = 0;
-        }
-        cardsContainer.style.transform = `translateX(-${scrollPosition}px)`;
-        animationFrame = requestAnimationFrame(animate);
-      }
-
-      // Iniciar animación solo si es visible
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animationFrame = requestAnimationFrame(animate);
-          } else {
-            if (animationFrame) {
-              cancelAnimationFrame(animationFrame);
-              animationFrame = null;
-            }
-          }
-        });
-      });
-
-      observer.observe(container);
-
-      // Limpiar al desmontar
-      return () => {
-        if (animationFrame) {
-          cancelAnimationFrame(animationFrame);
-        }
-        observer.disconnect();
-      };
-    });
-
-    // Optimizar el footer
-    const footer = document.getElementById('footer');
-    let ticking = false;
-
-    function checkFooterVisibility() {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const scrollBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
-          if (scrollBottom) {
-            footer.classList.remove('footer-hidden');
-            footer.classList.add('footer-visible');
-          } else {
-            footer.classList.remove('footer-visible');
-            footer.classList.add('footer-hidden');
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }
-
-    // Usar passive event listener para mejor rendimiento
-    if (footer) {
-      window.addEventListener('scroll', checkFooterVisibility, { passive: true });
-      window.addEventListener('resize', checkFooterVisibility, { passive: true });
-
-      // Initial check
-      checkFooterVisibility();
-    }
-
-    const spans = document.querySelectorAll('.word span');
-
-    spans.forEach((span, idx) => {
-      span.addEventListener('click', (e) => {
-        e.target.classList.add('active');
-      }, { passive: true });
-      span.addEventListener('animationend', (e) => {
-        e.target.classList.remove('active');
-      }, { passive: true });
-
-      // Initial animation
-      setTimeout(() => {
-        span.classList.add('active');
-      }, 750 * (idx + 1));
-    });
-    gsap.registerPlugin(ScrollTrigger);
-
-    // First step
-    gsap.from(".hero-main-container", {
-      scale: 1.45,
-      duration: 2.8,
-      ease: "power3.out",
-    });
-
-    gsap.to(".overlay", {
-      opacity: 0,
-      duration: 2.8,
-      ease: "power3.out",
-      onComplete: () => {
-        document.body.style.overflow = "visible";
-        document.body.style.overflowX = "hidden";
-      },
-    });
-
-    // Scroll Indicator
-    const scrollIndicator = document.querySelector(".scroll-indicator");
-    if (scrollIndicator) {
-      const bounceTimeline = gsap.timeline({
-        repeat: -1,
-        yoyo: true,
-      });
-
-      bounceTimeline.to(scrollIndicator, {
-        y: 20,
-        opacity: 0.6,
-        duration: 0.8,
-        ease: "power1.inOut",
-      });
-    }
-
-    // Create a timeline for better control
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".container",
-        scrub: 2,
-        pin: true,
-        start: "top top",
-        end: "+=500",
-        ease: "none",
-      },
-    });
-
-    // Need to ensure that the scale is like this otherwise some flicks happens
-    tl.set(".hero-main-container", {
-      scale: 1.25,
-    });
-
-    tl.to(".hero-main-container", {
-      scale: 1,
-      duration: 1,
-    });
-
-    tl.to(
-      ".hero-main-logo",
-      {
-        opacity: 0,
-        duration: 0.5,
-      },
-      "<" // starts at the same time of previous animation
-    );
-
-    tl.to(
-      ".hero-main-image",
-      {
-        opacity: 0,
-        duration: 0.9,
-      },
-      "<+=0.5"
-    );
-
-    tl.to(
-      ".hero-main-container",
-      {
-        backgroundSize: "28vh",
-        duration: 1.5,
-      },
-      "<+=0.2"
-    );
-
-    tl.fromTo(
-      ".hero-text",
-      {
-        backgroundImage: `radial-gradient(
-          circle at 50% 200vh,
-          rgba(255, 214, 135, 0) 0,
-          rgba(157, 47, 106, 0.5) 90vh,
-          rgba(157, 47, 106, 0.8) 120vh,
-          rgba(32, 31, 66, 0) 150vh
-        )`,
-      },
-      {
-        backgroundImage: `radial-gradient(circle at 50% 3.9575vh, rgb(255, 213, 133) 0vh,
-     rgb(247, 77, 82) 50.011vh,
-      rgb(145, 42, 105) 90.0183vh,
-       rgba(32, 31, 66, 0) 140.599vh)`,
-        duration: 3,
-      },
-      "<1.2" // starts 1.2 seconds before the previous animation
-    );
-
-    // logo purple
-    tl.fromTo(
-      ".hero-text-logo",
-
-      {
-        opacity: 0,
-        maskImage: `radial-gradient(circle at 50% 145.835%, rgb(0, 0, 0) 36.11%, rgba(0, 0, 0, 0) 68.055%)`,
-      },
-      {
-        opacity: 1,
-        maskImage: `radial-gradient(
-    circle at 50% 105.594%,
-    rgb(0, 0, 0) 62.9372%,
-    rgba(0, 0, 0, 0) 81.4686%
-  )`,
-        duration: 3,
-      },
-      "<0.2"
-    );
-
-    tl.set(".hero-main-container", { opacity: 0 });
-
-    tl.to(".hero-1-container", { scale: 0.85, duration: 3 }, "<-=3");
-
-    tl.set(
-      ".hero-1-container",
-      {
-        maskImage: `radial-gradient(circle at 50% 16.1137vh, rgb(0, 0, 0) 96.1949vh, rgba(0, 0, 0, 0) 112.065vh)`,
-      },
-      "<+=2.1"
-    );
-
-    tl.to(
-      ".hero-1-container",
-      {
-        maskImage: `radial-gradient(circle at 50% -40vh, rgb(0, 0, 0) 0vh, rgba(0, 0, 0, 0) 80vh)`,
-        duration: 2,
-      },
-      "<+=0.2" // Start 0.2 seconds after the mask is set
-    );
-
-    tl.to(
-      ".hero-text-logo",
-      {
-        opacity: 0,
-        duration: 2,
-      },
-      "<1.5"
-    );
-
-    tl.set(".hero-1-container", { opacity: 0 });
-    tl.set(".hero-2-container", { visibility: "visible" });
-
-    tl.to(".hero-2-container", { opacity: 1, duration: 3 }, "<+=0.2");
-
-    tl.fromTo(
-      ".hero-2-container",
-      {
-        backgroundImage: `radial-gradient(
-          circle at 50% 200vh,
-          rgba(255, 214, 135, 0) 0,
-          rgba(157, 47, 106, 0.5) 90vh,
-          rgba(157, 47, 106, 0.8) 120vh,
-          rgba(32, 31, 66, 0) 150vh
-        )`,
-      },
-      {
-        backgroundImage: `radial-gradient(circle at 50% 3.9575vh, rgb(255, 213, 133) 0vh,
-     rgb(247, 77, 82) 50.011vh,
-      rgb(145, 42, 105) 90.0183vh,
-       rgba(32, 31, 66, 0) 140.599vh)`,
-        duration: 3,
-      },
-      "<1.2" // starts 1.2 seconds before the previous animation
-      // he times from the start of the previous animation and since we're using 1.5s for the prev duration it's like 70% of the previous animation
-    );
-
-  </script>
 </body>
 
 </html>
