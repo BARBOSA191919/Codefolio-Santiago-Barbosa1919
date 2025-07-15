@@ -1,7 +1,173 @@
-/* Hero Section Styles */
+/* Keyframes for Hero */
+@keyframes gangorra {
+    0% {
+        transform: translateY(0%);
+    }
 
-.hero-1-container, .hero-main-container, .hero-main-image, .hero-text-logo-container, .hero-text-logo, .hero-text, .overlay {
-  /* Aquí van los estilos específicos del hero */
+    50% {
+        transform: translateY(-40%);
+    }
+
+    100% {
+        transform: translateY(40%);
+    }
 }
 
-/* Puedes mover aquí los estilos de animaciones y layout del hero desde style.css */ 
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Hero Section */
+.hero-main-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    transform: scale(1.25);
+    background-image: url("/Assets/img/Bienvenidos.svg");
+    background-size: 1000vh;
+    background-position: 50% 41.7%;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    padding-bottom: 200px;
+    margin-top: 0;
+    /* Aseguramos que no haya margen superior */
+    padding-top: 0;
+    /* Eliminamos cualquier padding superior que pueda estar causando el espacio */
+}
+
+.hero-main-image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+.hero-main-logo {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    object-fit: cover;
+}
+
+.hero-text-logo-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    object-fit: cover;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: url("/Assets/img/lenguajesbackend.avif");
+    background-repeat: no-repeat;
+    background-position: 50% 41.7%;
+    background-size: 48vh;
+    background-origin: content-box;
+    padding-bottom: 200px;
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+}
+
+.hero-text {
+    color: #ffb0c4;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: radial-gradient(circle at 50% 200vh,
+            rgba(255, 214, 135, 0) 0,
+            rgba(157, 47, 106, 0.5) 90vh,
+            rgba(157, 47, 106, 0.8) 120vh,
+            rgba(32, 31, 66, 0) 150vh);
+    -webkit-text-fill-color: transparent;
+    font-size: 4.5rem;
+    background-clip: text;
+    width: 100%;
+    line-height: 0.9;
+    margin-top: 55%;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px;
+    height: 14px;
+    z-index: 10;
+}
+
+.scroll-indicator svg {
+    color: #ffb0c4;
+    width: 100%;
+    height: 100%;
+}
+
+/* Letras Animation */
+.letras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.letras p {
+    display: inline-flex;
+    color: var(--blanco);
+    font-size: 2.6rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    padding: 0 4px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+p:nth-child(2),
+p:nth-child(12) {
+    animation: gangorra 0s alternate infinite;
+}
+
+p:nth-child(3),
+p:nth-child(11) {
+    animation: gangorra 2s alternate infinite;
+}
+
+p:nth-child(4),
+p:nth-child(10) {
+    animation: gangorra 4s alternate infinite;
+}
+
+p:nth-child(5),
+p:nth-child(9) {
+    animation: gangorra 3s alternate infinite;
+}
+
+p:nth-child(6) {
+    animation: gangorra 3s alternate infinite;
+}
+
+p:nth-child(8) {
+    animation: gangorra 4s alternate infinite;
+}

@@ -537,4 +537,3 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('#competenciasDesktop, #about, #contacto').forEach(section => {
   observer.observe(section);
 });
-
