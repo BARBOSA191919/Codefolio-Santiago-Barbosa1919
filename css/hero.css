@@ -50,9 +50,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    object-fit: cover;
-    object-position: center center;
-    /* Controla qué parte se muestra */
+    object-position: center ;
     display: block;
 }
 
