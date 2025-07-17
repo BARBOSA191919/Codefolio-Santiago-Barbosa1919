@@ -27,7 +27,7 @@ if (scrollIndicator) {
     bounceTimeline.to(scrollIndicator, {
         y: 20,
         opacity: 0.6,
-        duration:0.8,
+        duration: 0.8,
         ease: "power1.inOut",
     });
 }
@@ -74,7 +74,7 @@ tl.to(
 tl.fromTo(
     ".hero-text",
     {
-      backgroundImage: `radial-gradient(
+        backgroundImage: `radial-gradient(
         circle at 50% 200vh,
         rgba(240, 220, 180, 0) 0,
         rgba(112, 128, 144, 0.5) 90vh,
@@ -83,18 +83,18 @@ tl.fromTo(
       )`,
     },
     {
-      backgroundImage: `radial-gradient(
+        backgroundImage: `radial-gradient(
         circle at 50% 4vh,
         rgb(240, 220, 180) 0vh,
         rgb(78, 84, 117) 50vh,
         rgb(20, 30, 48) 90vh,
         rgba(20, 30, 48, 0) 140vh
       )`,
-      duration: 3,
+        duration: 3,
     },
     "<1.2"
-  );
-  
+);
+
 tl.fromTo(
     ".hero-text-logo",
     {

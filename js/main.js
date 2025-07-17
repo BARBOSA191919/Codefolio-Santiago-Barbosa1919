@@ -1,25 +1,11 @@
 console.log("main.js running");
 const scripts = [
 	'js/hamburger-menu.js',
-	'js/preloader.js',
-	'js/particles.js',
 	'js/social-share.js',
-	'js/aos-init.js',
-	'js/pace-preloader.js',
-	'js/skills-data.js',
-	'js/skills-render.js',
-	'js/footer-visibility.js',
+	'js/skills.js',
 	'js/hero-animation.js',
-	'js/text-animation.js',
-	'js/skill-tabs.js',
-	'js/portfolio-mixer.js',
-	'js/portfolio-popup.js',
 	'js/services-modal.js',
-	'js/swiper-testimonial.js',
-	'js/input-animation.js',
-	'js/scroll-nav.js',
-	'js/sidebar.js',
-	'js/word-animation.js'
+	'js/word-animation.js',
 ];
 
 function loadScript(src) {

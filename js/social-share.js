@@ -21,3 +21,25 @@ card1.addEventListener("click", () => window.open("https://www.linkedin.com/in/s
 card2.addEventListener("click", () => window.open("https://www.instagram.com/sbarbosarivas/", "_blank"));
 card3.addEventListener("click", () => window.open("https://github.com/BARBOSA191919", "_blank"));
 card4.addEventListener("click", () => window.open("https://discord.gg/ChznPA5q", "_blank"));
+
+//footer-visibiliy
+const footer = document.getElementById('footer');
+let ticking = false;
+
+function checkFooterVisibility() {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const scrollBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
+            footer.classList.toggle('footer-visible', scrollBottom);
+            footer.classList.toggle('footer-hidden', !scrollBottom);
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+if (footer) {
+    window.addEventListener('scroll', checkFooterVisibility, { passive: true });
+    window.addEventListener('resize', checkFooterVisibility, { passive: true });
+    checkFooterVisibility();
+}
