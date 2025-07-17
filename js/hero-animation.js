@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+gsap.set('.hero-main-container', { scale: 1 });
 
 gsap.from(".hero-main-container", {
     scale: 1.45,
@@ -26,7 +27,7 @@ if (scrollIndicator) {
     bounceTimeline.to(scrollIndicator, {
         y: 20,
         opacity: 0.6,
-        duration: 0.8,
+        duration:0.8,
         ease: "power1.inOut",
     });
 }
@@ -73,24 +74,27 @@ tl.to(
 tl.fromTo(
     ".hero-text",
     {
-        backgroundImage: `radial-gradient(
-      circle at 50% 200vh,
-      rgba(255, 214, 135, 0) 0,
-      rgba(157, 47, 106, 0.5) 90vh,
-      rgba(157, 47, 106, 0.8) 120vh,
-      rgba(32, 31, 66, 0) 150vh
-    )`,
+      backgroundImage: `radial-gradient(
+        circle at 50% 200vh,
+        rgba(240, 220, 180, 0) 0,
+        rgba(112, 128, 144, 0.5) 90vh,
+        rgb(20, 30, 48) 120vh,
+        rgba(20, 30, 48, 0) 350vh
+      )`,
     },
     {
-        backgroundImage: `radial-gradient(circle at 50% 3.9575vh, rgb(255, 213, 133) 0vh,
- rgb(247, 77, 82) 50.011vh,
-  rgb(145, 42, 105) 90.0183vh,
-   rgba(32, 31, 66, 0) 140.599vh)`,
-        duration: 3,
+      backgroundImage: `radial-gradient(
+        circle at 50% 4vh,
+        rgb(240, 220, 180) 0vh,
+        rgb(78, 84, 117) 50vh,
+        rgb(20, 30, 48) 90vh,
+        rgba(20, 30, 48, 0) 140vh
+      )`,
+      duration: 3,
     },
     "<1.2"
-);
-
+  );
+  
 tl.fromTo(
     ".hero-text-logo",
     {

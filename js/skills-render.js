@@ -15,33 +15,35 @@ function initializeSkillsRender() {
         return;
     }
 
-    // Crear cursor de luz solo si no es móvil
+    // Crear cursor de luz SIEMPRE (no solo en desktop)
     let cursorLight;
-    if (window.innerWidth > 768) {
-        cursorLight = document.createElement("div");
-        cursorLight.className = "cursor-light";
-        document.body.appendChild(cursorLight);
+    cursorLight = document.createElement("div");
+    cursorLight.className = "cursor-light";
+    document.body.appendChild(cursorLight);
 
-        container.addEventListener("mouseenter", () => {
-            cursorLight.style.display = "block";
-        }, { passive: true });
-        container.addEventListener("mouseleave", () => {
-            cursorLight.style.display = "none";
-        }, { passive: true });
+    // Detectar cuando el mouse entra/sale del área de skills
+    container.addEventListener("mouseenter", () => {
+        cursorLight.style.display = "block";
+        container.classList.add("cursor-active"); // Añadir clase para activar CSS
+    }, { passive: true });
+    
+    container.addEventListener("mouseleave", () => {
+        cursorLight.style.display = "none";
+        container.classList.remove("cursor-active"); // Remover clase
+    }, { passive: true });
 
-        // Throttle mousemove para mejor rendimiento
-        let ticking = false;
-        document.addEventListener("mousemove", (e) => {
-            if (!ticking) {
-                requestAnimationFrame(() => {
-                    cursorLight.style.left = `${e.clientX}px`;
-                    cursorLight.style.top = `${e.clientY}px`;
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        }, { passive: true });
-    }
+    // Throttle mousemove para mejor rendimiento
+    let ticking = false;
+    document.addEventListener("mousemove", (e) => {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                cursorLight.style.left = `${e.clientX}px`;
+                cursorLight.style.top = `${e.clientY}px`;
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 
     // Optimizar la creación de cards
     function createCard(skill) {
@@ -61,6 +63,17 @@ function initializeSkillsRender() {
                 <div class="skill-name">${skill.name}</div>
             </div>
         `;
+
+        // Añadir eventos para intensificar el cursor en cada card individual
+        card.addEventListener("mouseenter", () => {
+            cursorLight.classList.add("super-bright");
+            card.classList.add("card-hovered");
+        }, { passive: true });
+        
+        card.addEventListener("mouseleave", () => {
+            cursorLight.classList.remove("super-bright");
+            card.classList.remove("card-hovered");
+        }, { passive: true });
 
         card.addEventListener("click", () => {
             window.open(skill.url, "_blank", "noopener,noreferrer");
@@ -132,6 +145,10 @@ function initializeSkillsRender() {
             cancelAnimationFrame(animationFrame);
         }
         observer.disconnect();
+        // Limpiar cursor al desmontar
+        if (cursorLight && cursorLight.parentNode) {
+            cursorLight.parentNode.removeChild(cursorLight);
+        }
     };
 }
 

@@ -84,6 +84,44 @@
     }
 }
 
+@media (max-width: 600px) {
+    .hero-main-image {
+        object-fit: cover;
+        /* o prueba contain si prefieres que nunca se recorte */
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: clamp(2rem, 8vw, 5rem);
+        text-align: center;
+        line-height: 1.1;
+    }
+
+    .hero-main-container,
+    .hero-text-logo,
+    .hero-text-logo-container {
+        min-height: 100dvh;
+    }
+
+    .scroll-indicator {
+        bottom: 4%;
+    }
+
+    .letras p {
+        font-size: 1.8rem;
+        padding: 0 2px;
+        gap: 2px;
+    }
+}
+
+
+
+
 @media (min-width: 1080px) {
     section#projects .wrapper .cards {
         display: grid;
@@ -115,6 +153,59 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+    }
+
+    .about-img {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    .image-container {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .about-description {
+        font-size: 1.4rem;
+        padding-right: 0;
+        padding-left: 0;
+        text-align: justify;
+        line-height: 1.6;
+    }
+
+    .about-heading {
+        font-size: 2.2rem;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .contact-button {
+        font-size: 1rem;
+        padding: 12px 30px;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .about-buttons {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
 
 @media (max-width: 1080px) {
     .contact-content {
@@ -371,5 +462,14 @@
 
     .footer-phrase {
         font-size: 1.1rem;
+    }
+}
+
+@keyframes subtle-glow {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(0, 150, 255, 0.15);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(0, 150, 255, 0.4);
     }
 }

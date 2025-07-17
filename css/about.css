@@ -11,6 +11,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about.section header {
@@ -70,7 +72,7 @@
 }
 
 .image-container img {
-    width: 70%;
+    width: 100%;
     height: auto;
     display: block;
     transition: transform 0.5s ease;

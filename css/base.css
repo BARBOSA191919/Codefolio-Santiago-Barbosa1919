@@ -1,6 +1,6 @@
 /* Base Styles */
 * {
-  padding: 0;
+  padding:0;
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -105,4 +105,19 @@ section {
 .portfolio-popup-body {
   color: white;
   font-size: 1.2rem;
+}
+
+/* Hero image centering */
+.hero-main-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
