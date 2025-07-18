@@ -149,7 +149,7 @@ function initializeSkillsRender() {
 
     // Optimizar la animación de scroll
     let scrollPosition = 0;
-    const scrollSpeed = window.innerWidth <= 768 ? 1 : 2; // Velocidad más lenta en móvil
+    const scrollSpeed = window.innerWidth <= 768 ? 3 : 6; // Más rápido en ambos
 
     // Calcular ancho de card
     const cardWidthValue = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--card-width")) || 120;

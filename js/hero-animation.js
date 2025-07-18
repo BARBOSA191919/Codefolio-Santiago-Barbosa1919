@@ -35,10 +35,10 @@ if (scrollIndicator) {
 const tl = gsap.timeline({
     scrollTrigger: {
         trigger: ".container",
-        scrub: 2,
+        scrub: 8,
         pin: true,
         start: "top top",
-        end: "+=500",
+        end: "+=2000",
         ease: "none",
     },
 });
