@@ -1,11 +1,21 @@
-@import "./variable.css";
-@import "./base.css";
-@import "./hero.css";
-@import "./navbar.css";
-@import "./home.css";
-@import "./projects.css";
-@import "./competencias.css";
-@import "./about.css";
-@import "./contact.css";
-@import "./footer.css";
-@import "./responsive.css";
+@import "./critical.css";
+@import "./principal.css";
+@import "./components.css";
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.high-contrast {
+  color: #fff !important;
+  background: #111;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
