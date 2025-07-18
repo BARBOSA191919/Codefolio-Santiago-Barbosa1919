@@ -69,7 +69,7 @@ function initializeSkillsRender() {
         cursorLight.style.display = "block";
         container.classList.add("cursor-active"); // Añadir clase para activar CSS
     }, { passive: true });
-    
+
     container.addEventListener("mouseleave", () => {
         cursorLight.style.display = "none";
         container.classList.remove("cursor-active"); // Remover clase
@@ -112,7 +112,7 @@ function initializeSkillsRender() {
             cursorLight.classList.add("super-bright");
             card.classList.add("card-hovered");
         }, { passive: true });
-        
+
         card.addEventListener("mouseleave", () => {
             cursorLight.classList.remove("super-bright");
             card.classList.remove("card-hovered");
