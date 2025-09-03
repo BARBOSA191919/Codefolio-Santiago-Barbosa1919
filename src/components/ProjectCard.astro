@@ -1,0 +1,45 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  technologies: string[];
+  githubUrl: string;
+  demoUrl?: string;
+}
+
+const { title, description, image, imageAlt, technologies, githubUrl, demoUrl } = Astro.props;
+---
+
+<div class="card left">
+  <div class="image">
+    <a target="_blank" href={demoUrl || githubUrl} rel="noopener noreferrer" aria-label={`Ver proyecto ${title}`}>
+      <img src={image} alt={imageAlt} loading="lazy">
+    </a>
+  </div>
+
+  <div class="text">
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+
+  <div class="technologies flex justify-center items-center gap-2">
+    {technologies.map((tech) => (
+      <ion-icon name={tech} class="text-2xl"></ion-icon>
+    ))}
+  </div>
+  
+  <div class="project-buttons">
+    <a href={githubUrl} class="btn-code" target="_blank" rel="noopener noreferrer" aria-label={`Ver código de ${title}`}>
+      <i class="fas fa-code" aria-hidden="true"></i>
+      Ver código
+    </a>
+    {demoUrl && (
+      <a href={demoUrl} class="btn-demo" target="_blank" rel="noopener noreferrer" aria-label={`Ver demo de ${title}`}>
+        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+        Demo
+      </a>
+    )}
+  </div>
+</div>

@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Navigation from '../components/Navigation.astro';
+import HeaderSection from '../components/HeaderSection.astro';
+import SkillsSection from '../components/SkillsSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
+import { projects } from '../data/projects';
+---
+
+<Layout title="Santiago Barbosa - Desarrollador Full Stack">
+  <div id="particles-js"></div>
+  
+  <div class="video">
+    <video autoplay loop muted playsinline preload="metadata">
+      <source src="/Assets/video/bg_video.webm" type="video/mp4">
+      <track kind="captions" label="Español" srclang="es" src="">
+      <img src="/Assets/img/bg_videoImg.avif" alt="Imagen fondo">
+    </video>
+  </div>
+
+  <!-- Navigation -->
+  <Navigation />
+
+  <HeaderSection />
+
+  <!-- Projects Section -->
+  <main>
+    <section id="projects">
+      <div class="wrapper">
+        <header>
+          <div class="word">
+            <span>B</span>
+            <span>I</span>
+            <span>E</span>
+            <span>N</span>
+            <span>V</span>
+            <span>E</span>
+            <span>N</span>
+            <span>I</span>
+            <span>D</span>
+            <span>O</span>
+            <span>S</span>
+          </div>
+          <p>Haz click en la imagen para ver los detalles y
+            redireccionar al sitio.
+          </p>
+        </header>
+
+        <div class="cards">
+          {projects.map((project) => (
+            <ProjectCard {...project} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+  <!-- Skills Section -->
+  <SkillsSection />
+
+  <!-- About Section -->
+  <AboutSection />
+
+  <!-- Contact Section -->
+  <ContactSection />
+
+  <!-- Footer -->
+  <Footer />
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="loader"></div>
+  </div>
+
+  <!-- Portfolio Popup -->
+  <div class="portfolio-popup">
+    <span class="portfolio-popup-close">X</span>
+    <div class="pp-thumbnail">
+      <img src="" alt="">
+    </div>
+    <div class="portfolio-popup-subtitle">
+      <span></span>
+    </div>
+    <div class="portfolio-popup-body"></div>
+  </div>
+</Layout>
