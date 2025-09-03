@@ -6,7 +6,7 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'static',
   adapter: vercel(),
-  site: 'https://mi-portafolio-beta-seven.vercel.app/',
+  site: 'https://codefolio-santiago-barbosa1919.vercel.app/',
   base: '/',
   trailingSlash: 'never',
   build: {
