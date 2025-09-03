@@ -5,11 +5,11 @@ export interface Props {
 }
 
 const { title, description = "Portfolio de Santiago Barbosa - Desarrollador Full Stack. Proyectos en Java, Spring Boot, Angular, PHP y más." } = Astro.props;
+import "../styles/main.css";
 ---
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <!-- Meta tags básicos -->
   <meta charset="UTF-8">
@@ -22,18 +22,15 @@ const { title, description = "Portfolio de Santiago Barbosa - Desarrollador Full
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <!-- Ion Icons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/src/styles/main.css">
+  <!-- CSS empaquetado por Astro/Vite (ya funciona) -->
 
-  <!-- Scripts -->
+  <!-- Scripts externos -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
 
@@ -65,9 +62,8 @@ const { title, description = "Portfolio de Santiago Barbosa - Desarrollador Full
 
 <body>
   <slot />
-  
-  <!-- Scripts -->
-  <script src="/src/scripts/main.js" defer></script>
+<!-- Scripts del proyecto - IMPORTANTE: especificar cada archivo -->
+ <!-- Scripts del proyecto con is:inline para assets en public/ -->
+ <script is:inline src="/scripts/main.js"></script>
 </body>
-
 </html>

@@ -1,3 +1,4 @@
+
 const hamburger = document.querySelector(".bars__menu");
 const navContent = document.querySelector(".nav-content");
 const line1__bars = document.querySelector(".line1__bars-menu");

@@ -78,9 +78,7 @@ section {
 }
 
 .container {
-  max-width: 120rem;
-  margin: 0 auto;
-  width: 90%;
+  max-width: 148rem;
 }
 
 /* Scrollbar Styles */
@@ -172,7 +170,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100% ;
 }
 
 /* Seccion Navbar*/
@@ -401,7 +399,7 @@ section {
 .hero-main-image {
   width: 100vw;
   height: 100vh;
-  max-width: 100vw;
+  max-width: 99vw;
   max-height: 100vh;
   position: absolute;
   top: 0;
