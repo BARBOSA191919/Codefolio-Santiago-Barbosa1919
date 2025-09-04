@@ -25,9 +25,34 @@ const { title, description, image, imageAlt, technologies, githubUrl, demoUrl } 
   </div>
 
   <div class="technologies flex justify-center items-center gap-2">
-    {technologies.map((tech) => (
-      <ion-icon name={tech} class="text-2xl"></ion-icon>
-    ))}
+    {technologies.map((tech) => {
+      // Mapeo de colores vibrantes para cada tecnología
+      const getTechColor = (techClass: string) => {
+        if (techClass.includes('fa-java')) return 'text-orange-500 hover:text-orange-600';
+        if (techClass.includes('fa-spring')) return 'text-green-500 hover:text-green-600';
+        if (techClass.includes('fa-database')) return 'text-blue-500 hover:text-blue-600';
+        if (techClass.includes('fa-php')) return 'text-purple-500 hover:text-purple-600';
+        if (techClass.includes('fa-html5')) return 'text-red-500 hover:text-red-600';
+        if (techClass.includes('fa-css3-alt')) return 'text-blue-400 hover:text-blue-500';
+        if (techClass.includes('fa-js')) return 'text-yellow-400 hover:text-yellow-500';
+        if (techClass.includes('fa-js-square')) return 'text-blue-500 hover:text-blue-600';
+        if (techClass.includes('fa-react')) return 'text-cyan-400 hover:text-cyan-500';
+        if (techClass.includes('fa-angular')) return 'text-red-500 hover:text-red-600';
+        if (techClass.includes('fa-git-alt')) return 'text-orange-600 hover:text-orange-700';
+        if (techClass.includes('fa-arrows-rotate')) return 'text-green-500 hover:text-green-600';
+        if (techClass.includes('fa-rocket')) return 'text-purple-500 hover:text-purple-600';
+        if (techClass.includes('fa-gamepad')) return 'text-indigo-500 hover:text-indigo-600';
+        if (techClass.includes('fa-fire')) return 'text-red-500 hover:text-red-600';
+        return 'text-gray-600 hover:text-blue-500';
+      };
+      
+      return (
+        <i 
+          class={`${tech} text-2xl ${getTechColor(tech)} transition-all duration-300 hover:scale-125 hover:rotate-12 drop-shadow-lg`}
+          title={tech.replace('fa-brands fa-', '').replace('fa-solid fa-', '').replace('-', ' ')}
+        ></i>
+      );
+    })}
   </div>
   
   <div class="project-buttons">
