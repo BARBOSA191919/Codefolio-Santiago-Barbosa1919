@@ -74,7 +74,7 @@
         <!-- Formulario de contacto -->
         <div class="form-card">
           <h3>Envíame un mensaje</h3>
-          <form class="contact-form" method="POST">
+          <form id="form" class="contact-form" method="POST">
             <div class="form-group">
               <label for="name" class="form-label">
                 <i class="fas fa-user" aria-hidden="true"></i>
@@ -83,7 +83,7 @@
               <input 
                 type="text" 
                 id="name" 
-                name="name" 
+                name="from_name"
                 placeholder="Tu nombre" 
                 class="form-input"
                 required
@@ -98,7 +98,7 @@
               <input 
                 type="email" 
                 id="email" 
-                name="email" 
+                name="reply_to"
                 placeholder="tuemail@ejemplo.com" 
                 class="form-input"
                 required
@@ -120,10 +120,13 @@
               ></textarea>
             </div>
 
-            <button type="submit" class="form-submit">
-              <i class="fas fa-paper-plane" aria-hidden="true"></i>
-              Enviar Mensaje
-            </button>
+            <!-- Campos auxiliares -->
+            <input type="hidden" id="title" name="title" value="Nuevo mensaje desde el portafolio" />
+            <input type="hidden" id="email_id" name="email_id" value="contact-form" />
+            <!-- Fuerza que el destinatario siempre seas tú -->
+            <input type="hidden" id="to_email" name="to_email" value="sbarbosarivas@gmail.com" />
+
+            <input type="submit" id="button" value="Enviar Mensaje" class="form-submit" />
           </form>
         </div>
       </div>
