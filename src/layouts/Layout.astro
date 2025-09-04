@@ -33,6 +33,7 @@ import "../styles/main.css";
   <!-- Scripts externos -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!-- Preconnect para optimizar carga -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,8 +63,9 @@ import "../styles/main.css";
 
 <body>
   <slot />
-<!-- Scripts del proyecto - IMPORTANTE: especificar cada archivo -->
+  <!-- Scripts del proyecto - IMPORTANTE: especificar cada archivo -->
  <!-- Scripts del proyecto con is:inline para assets en public/ -->
  <script is:inline src="/scripts/main.js"></script>
+ <script is:inline src="/scripts/contact-form.js"></script>
 </body>
 </html>
